@@ -1,54 +1,64 @@
 export type AudienceItem = {
-  icon: string;
-  title: string;
-  description: string;
+  headline: string;
+  subhead: string;
+  quote: string;
+  action: string;
 };
 
 export const audience: AudienceItem[] = [
   {
-    icon: 'directions_walk',
-    title: 'Nunca has hecho ejercicio',
-    description:
-      'Te gustaría moverte más pero no sabes por dónde empezar o te da respeto hacerlo solo. Partimos desde cero, a tu ritmo.'
+    headline: 'Nunca has hecho ejercicio.',
+    subhead: 'Y no sabes cómo empezar.',
+    quote: '"Me han dicho que el ejercicio puede ayudarme. Pero no sé por dónde empezar."',
+    action:
+      'Te guiaremos con un plan claro y progresivo. Empezaremos con seguridad, sin agobios.'
   },
   {
-    icon: 'fitness_center',
-    title: 'Haces ejercicio pero tienes dudas',
-    description:
-      'Te mueves, pero no tienes claro si lo haces bien, si es suficiente o si es adecuado para tu situación actual.'
+    headline: 'Sí has hecho ejercicio.',
+    subhead: 'Pero dudas si lo haces bien.',
+    quote: '"Estoy haciendo algo, pero tengo dudas. Quiero mejorar sin interferir con mis tratamientos."',
+    action:
+      'Ajustaremos tu entrenamiento para que sea eficaz. Y lo haremos sostenible para tu día a día.'
   },
   {
-    icon: 'healing',
-    title: 'Quieres moverte pero el dolor te frena',
-    description:
-      'El dolor, la fatiga o el miedo a empeorar te están limitando. Te ayudamos a recuperar movimiento sin miedo.'
+    headline: 'Quieres hacer ejercicio.',
+    subhead: 'Pero el dolor te frena.',
+    quote: '"Quiero hacer ejercicio, pero me da miedo empeorar. No sé qué ejercicios me convienen ahora."',
+    action:
+      'Aprenderás a moverte con confianza. Y a progresar sin miedo, incluso con dolor.'
   }
 ];
 
-export const valueProps = [
+export type ValueProp = {
+  title: string;
+  bold?: string;
+  body: string;
+};
+
+export const valueProps: ValueProp[] = [
   {
-    icon: 'home',
-    title: 'Desde casa, sin desplazamientos',
-    description: 'Nosotros vamos a ti. Ahorras tiempo y energía para lo que importa.'
+    title: 'Comodidad real, resultados reales',
+    body:
+      'Nada como recuperarte donde estás más cómodo: **en casa**. Con **tus horarios** y a **tu ritmo**. Con la fisioterapia a domicilio te eliminamos barreras para que avances con más **facilidad**.'
   },
   {
-    icon: 'person',
-    title: 'Atención personalizada',
-    description: 'Una sesión, un profesional, tu plan. Sin cintas transportadoras.'
+    title: 'Ganarás tiempo, sin perder salud',
+    body:
+      'Sin desplazamientos, sin tráfico, sin estrés. Un formato pensado para **priorizar tu tiempo y tu bienestar**.'
   },
   {
-    icon: 'verified',
-    title: 'Más de 7 años en hospital',
-    description: 'Experiencia real acompañando a pacientes oncológicos en el sistema público.'
+    title: 'Atención verdaderamente personalizada',
+    body:
+      'Una sesión contigo. Un único fisioterapeuta que conoce **tu historia**, tus objetivos y tu forma de moverte. Sin prisas ni salas compartidas.'
   },
   {
-    icon: 'self_improvement',
-    title: 'Pensado para tu autonomía',
-    description: 'Nuestro objetivo no es que nos necesites, sino que dejes de hacerlo.'
+    title: 'Experiencia que marca la diferencia',
+    body:
+      '**+7 años** en hospital nos han enseñado qué funciona: criterio basado en la evidencia y trato humano de verdad. Ese nivel de **calidad** es el que llevamos **a tu casa**.'
   },
   {
-    icon: 'science',
-    title: 'Basado en la evidencia',
-    description: 'Cada decisión tiene un porqué. Si no funciona, lo cambiamos.'
+    title: 'Independencia, no dependencia',
+    body:
+      'Queremos **devolverte la seguridad y confianza** para que puedas manejar tu día a día con menos limitaciones. Buscamos que **dependas menos**, no más.'
   }
 ];

@@ -15,10 +15,10 @@
   }
 </script>
 
-<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-secondary">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-light opacity-80">
   {#if category}
     <span
-      class="inline-flex items-center rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-medium"
+      class="inline-flex items-center rounded-full bg-[color:var(--color-brand-accent)]/30 text-[color:var(--color-brand)] px-3 py-1 text-xs font-medium tracking-wide uppercase"
     >
       {category}
     </span>

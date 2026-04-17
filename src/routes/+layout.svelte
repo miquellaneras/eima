@@ -20,11 +20,13 @@
   <meta name="twitter:domain" content="eimafisioterapia.es" />
 </svelte:head>
 
-<main class="min-h-screen text-primary bg-default">
+<div class="min-h-screen bg-default text-primary">
   <Header bind:mobileMenuOpen />
   <MobileMenu {mobileMenuOpen} onClose={closeMobileMenu} />
 
-  <slot />
+  <main>
+    <slot />
+  </main>
 
   <Footer />
-</main>
+</div>

@@ -8,6 +8,7 @@
     { href: '/que-haremos', label: 'Qué haremos' },
     { href: '/quienes-somos', label: 'Quiénes somos' },
     { href: '/centro-salud-virtual', label: 'Centro de Salud Virtual' },
+    { href: '/contacto', label: 'Contacto' },
     { href: '/blog', label: 'Blog' }
   ];
 </script>
@@ -19,50 +20,23 @@
   aria-modal="true"
   aria-hidden={!mobileMenuOpen}
 >
-  <nav class="mt-20 mb-10 px-6 z-40">
+  <nav class="mt-24 mb-10 px-8 flex flex-col gap-2">
     {#each links as link (link.href)}
       <a
         href={link.href}
-        class="flex items-center justify-between !text-xl py-2 hover:text-brand transition-colors duration-200 relative group"
+        class="text-xl font-light text-[color:var(--color-brand-soft)] hover:text-[color:var(--color-brand)] py-2 border-b border-default transition-colors"
         on:click={onClose}
       >
-        <span>{link.label}</span>
-        <span
-          class="material-symbols-rounded group-hover:-translate-x-2 transition-all duration-300"
-        >
-          arrow_forward
-        </span>
-        <span
-          class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"
-        ></span>
+        {link.label}
       </a>
     {/each}
     <a
       href="tel:+34658521077"
-      class="flex items-center justify-between !text-xl py-2 hover:text-brand transition-colors duration-200 relative group"
+      class="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-3 font-medium"
       on:click={onClose}
     >
-      <span>658 52 10 77</span>
-      <span class="material-symbols-rounded">call</span>
-    </a>
-    <a
-      href="/contacto"
-      class="group relative flex items-center !text-xl py-2"
-      on:click={onClose}
-    >
-      <span
-        class="relative z-10 inline-flex rounded-lg bg-brand text-inverse
-          px-4 py-2 flex-none transition-[flex-grow,padding-right] duration-300 ease-in-out
-          group-hover:flex-grow group-hover:pr-12"
-      >
-        Contacto
-      </span>
-      <span
-        class="material-symbols-rounded absolute right-0 z-20 transition-all duration-300 ease-in-out
-          group-hover:text-inverse group-hover:-translate-x-2"
-      >
-        arrow_forward
-      </span>
+      <span class="material-symbols-rounded !text-base">call</span>
+      Llámanos
     </a>
   </nav>
 </div>

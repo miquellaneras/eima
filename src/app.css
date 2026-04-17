@@ -1,12 +1,24 @@
 @import 'tailwindcss';
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css';
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/noto-serif/400-italic.css';
+@import '@fontsource/noto-serif/700-italic.css';
 
 * {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial,
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial,
     sans-serif;
+}
+
+body {
+  font-weight: 300;
+  color: var(--color-brand);
+}
+
+.font-serif-italic {
+  font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  font-style: italic;
 }
 
 .material-symbols-rounded {
@@ -27,129 +39,190 @@
 
 @theme {
   --color-brand: #233f4e;
+  --color-brand-soft: #245b7d;
   --color-brand-accent: #8cd0d6;
-  --color-brand-dark: #0e1d26;
-  --color-inverse: #fafaf9;
+  --color-brand-dark: #24404d;
+  --color-brand-deepest: #0e1d26;
+  --color-surface: #f5f4f9;
+  --color-surface-warm: #f3ece0;
+  --color-inverse: #ffffff;
+  --radius-pill: 9999px;
+  --radius-card: 10px;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: var(--color-brand);
+    -webkit-font-smoothing: antialiased;
   }
 
   section[id] {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-brand);
+  }
+
+  strong,
+  b {
+    font-weight: 700;
   }
 }
 
 @utility text-primary {
-  @apply text-slate-800;
+  color: var(--color-brand);
 }
 
 @utility text-secondary {
-  @apply text-slate-500;
+  color: var(--color-brand-soft);
+}
+
+@utility text-muted {
+  color: color-mix(in srgb, var(--color-brand) 60%, transparent);
 }
 
 @utility bg-default {
-  @apply bg-slate-50;
+  background-color: var(--color-surface);
 }
 
-@utility bg-primary {
-  @apply bg-white;
+@utility bg-warm {
+  background-color: var(--color-surface-warm);
 }
 
-@utility bg-secondary {
-  @apply bg-slate-100;
-}
-
-@utility bg-strong {
-  @apply bg-slate-400;
+@utility bg-card {
+  background-color: #ffffff;
 }
 
 @utility bg-dark {
-  @apply bg-slate-800;
+  background-color: var(--color-brand-dark);
 }
 
-@utility bg-border {
-  @apply bg-slate-200;
+@utility bg-deeper {
+  background-color: var(--color-brand-deepest);
 }
 
 @utility border-default {
-  @apply border-slate-200;
+  border-color: color-mix(in srgb, var(--color-brand) 15%, transparent);
 }
 
-@utility border-strong {
-  @apply border-slate-400;
+@utility border-accent {
+  border-color: var(--color-brand-accent);
 }
 
-@utility border-dark {
-  @apply border-slate-800;
+@utility btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-brand-accent);
+  color: var(--color-brand);
+  border-radius: var(--radius-pill);
+  padding: 0.7rem 1.6rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: transform 200ms ease, opacity 200ms ease;
+  box-shadow: 0 1px 3px rgba(14, 29, 38, 0.08);
+}
+@utility btn-pill-hover {
+  transform: scale(1.03);
+  opacity: 0.95;
 }
 
-@utility ring-default {
-  @apply ring-slate-400;
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-inverse);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-pill);
+  padding: 0.65rem 1.4rem;
+  font-weight: 400;
+  transition: all 200ms ease;
 }
 
-@utility divide-default {
-  @apply divide-slate-200;
+@utility card-soft {
+  background-color: color-mix(in srgb, #ffffff 60%, var(--color-surface));
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px rgba(14, 29, 38, 0.06);
 }
 
 @utility prose-blog {
-  @apply text-slate-700 leading-relaxed;
+  color: var(--color-brand);
+  line-height: 1.75;
 
   & h2 {
-    @apply text-2xl md:text-3xl font-semibold text-slate-800 mt-12 mb-4 scroll-mt-20;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-brand);
   }
   & h3 {
-    @apply text-xl md:text-2xl font-semibold text-slate-800 mt-10 mb-3 scroll-mt-20;
-  }
-  & h4 {
-    @apply text-lg font-semibold text-slate-800 mt-8 mb-2;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-brand);
   }
   & p {
-    @apply my-5 text-base md:text-lg;
+    margin: 1.25rem 0;
+    font-weight: 300;
   }
   & a {
-    @apply text-brand underline underline-offset-2 hover:opacity-80 transition-opacity;
+    color: var(--color-brand-soft);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  & a:hover {
+    opacity: 0.8;
   }
   & strong {
-    @apply font-semibold text-slate-800;
+    font-weight: 700;
   }
   & ul {
-    @apply my-5 pl-6 list-disc space-y-2;
+    margin: 1.25rem 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+  & ul li {
+    margin: 0.5rem 0;
+    font-weight: 300;
   }
   & ol {
-    @apply my-5 pl-6 list-decimal space-y-2;
-  }
-  & li {
-    @apply text-base md:text-lg;
+    margin: 1.25rem 0;
+    padding-left: 1.5rem;
+    list-style: decimal;
   }
   & blockquote {
-    @apply my-6 pl-4 border-l-4 border-brand/50 italic text-slate-600;
-  }
-  & code {
-    @apply px-1.5 py-0.5 rounded bg-slate-100 text-slate-800 text-[0.9em] font-mono;
-  }
-  & pre {
-    @apply my-6 p-4 rounded-lg bg-slate-900 text-slate-100 overflow-x-auto text-sm;
-  }
-  & pre code {
-    @apply bg-transparent text-slate-100 p-0;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-brand-accent);
+    font-style: italic;
+    color: var(--color-brand-soft);
   }
   & img {
-    @apply my-8 rounded-lg w-full h-auto;
+    margin: 2rem 0;
+    border-radius: var(--radius-card);
+    width: 100%;
+    height: auto;
   }
   & hr {
-    @apply my-10 border-slate-200;
-  }
-  & table {
-    @apply my-6 w-full border-collapse;
-  }
-  & th {
-    @apply text-left font-semibold text-slate-800 border-b border-slate-300 py-2 px-3;
-  }
-  & td {
-    @apply border-b border-slate-200 py-2 px-3;
+    margin: 2.5rem 0;
+    border-color: color-mix(in srgb, var(--color-brand) 15%, transparent);
   }
 }
