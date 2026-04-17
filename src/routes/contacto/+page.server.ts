@@ -2,14 +2,7 @@ import type { Actions } from './$types';
 import type { Action } from '@sveltejs/kit';
 import nodemailer from 'nodemailer';
 
-import {
-  SMTP_HOST,
-  SMTP_PORT,
-  SMTP_USER,
-  SMTP_PASS,
-  SMTP_FROM,
-  SMTP_TO
-} from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export const actions: Actions = {
   default: (async ({ request }) => {
@@ -47,19 +40,24 @@ export const actions: Actions = {
     const messageStr = typeof message === 'string' ? message.trim() : '';
 
     try {
+      if (!env.SMTP_HOST || !env.SMTP_USER || !env.SMTP_PASS) {
+        console.error('SMTP env vars not configured');
+        return { success: false, error: 'El formulario no está configurado todavía.' };
+      }
+
       const transporter = nodemailer.createTransport({
-        host: SMTP_HOST,
-        port: Number(SMTP_PORT),
+        host: env.SMTP_HOST,
+        port: Number(env.SMTP_PORT ?? 465),
         secure: true,
         auth: {
-          user: SMTP_USER,
-          pass: SMTP_PASS
+          user: env.SMTP_USER,
+          pass: env.SMTP_PASS
         }
       });
 
       await transporter.sendMail({
-        from: SMTP_FROM,
-        to: SMTP_TO,
+        from: env.SMTP_FROM ?? env.SMTP_USER,
+        to: env.SMTP_TO ?? env.SMTP_USER,
         subject: 'Nuevo contacto - EIMA Fisioterapia',
         text: `Nombre: ${nameStr}\nEmail: ${email}\nTeléfono: ${phoneStr}\nLocalidad: ${locationStr}\n\nMensaje:\n${messageStr}`,
         html: `<p><strong>Nombre:</strong> ${nameStr}</p>
