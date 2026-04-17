@@ -1,0 +1,155 @@
+@import 'tailwindcss';
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+* {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial,
+    sans-serif;
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
+}
+
+@theme {
+  --color-brand: #233f4e;
+  --color-brand-accent: #8cd0d6;
+  --color-brand-dark: #0e1d26;
+  --color-inverse: #fafaf9;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
+}
+
+@utility text-primary {
+  @apply text-slate-800;
+}
+
+@utility text-secondary {
+  @apply text-slate-500;
+}
+
+@utility bg-default {
+  @apply bg-slate-50;
+}
+
+@utility bg-primary {
+  @apply bg-white;
+}
+
+@utility bg-secondary {
+  @apply bg-slate-100;
+}
+
+@utility bg-strong {
+  @apply bg-slate-400;
+}
+
+@utility bg-dark {
+  @apply bg-slate-800;
+}
+
+@utility bg-border {
+  @apply bg-slate-200;
+}
+
+@utility border-default {
+  @apply border-slate-200;
+}
+
+@utility border-strong {
+  @apply border-slate-400;
+}
+
+@utility border-dark {
+  @apply border-slate-800;
+}
+
+@utility ring-default {
+  @apply ring-slate-400;
+}
+
+@utility divide-default {
+  @apply divide-slate-200;
+}
+
+@utility prose-blog {
+  @apply text-slate-700 leading-relaxed;
+
+  & h2 {
+    @apply text-2xl md:text-3xl font-semibold text-slate-800 mt-12 mb-4 scroll-mt-20;
+  }
+  & h3 {
+    @apply text-xl md:text-2xl font-semibold text-slate-800 mt-10 mb-3 scroll-mt-20;
+  }
+  & h4 {
+    @apply text-lg font-semibold text-slate-800 mt-8 mb-2;
+  }
+  & p {
+    @apply my-5 text-base md:text-lg;
+  }
+  & a {
+    @apply text-brand underline underline-offset-2 hover:opacity-80 transition-opacity;
+  }
+  & strong {
+    @apply font-semibold text-slate-800;
+  }
+  & ul {
+    @apply my-5 pl-6 list-disc space-y-2;
+  }
+  & ol {
+    @apply my-5 pl-6 list-decimal space-y-2;
+  }
+  & li {
+    @apply text-base md:text-lg;
+  }
+  & blockquote {
+    @apply my-6 pl-4 border-l-4 border-brand/50 italic text-slate-600;
+  }
+  & code {
+    @apply px-1.5 py-0.5 rounded bg-slate-100 text-slate-800 text-[0.9em] font-mono;
+  }
+  & pre {
+    @apply my-6 p-4 rounded-lg bg-slate-900 text-slate-100 overflow-x-auto text-sm;
+  }
+  & pre code {
+    @apply bg-transparent text-slate-100 p-0;
+  }
+  & img {
+    @apply my-8 rounded-lg w-full h-auto;
+  }
+  & hr {
+    @apply my-10 border-slate-200;
+  }
+  & table {
+    @apply my-6 w-full border-collapse;
+  }
+  & th {
+    @apply text-left font-semibold text-slate-800 border-b border-slate-300 py-2 px-3;
+  }
+  & td {
+    @apply border-b border-slate-200 py-2 px-3;
+  }
+}

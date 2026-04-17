@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="es-ES" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="theme-color" content="#233f4e" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://eimafisioterapia.es/#website",
+        "name": "EIMA Fisioterapia",
+        "url": "https://eimafisioterapia.es/",
+        "inLanguage": "es-ES",
+        "publisher": { "@id": "https://eimafisioterapia.es/#organization" }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "MedicalBusiness", "LocalBusiness"],
+        "@id": "https://eimafisioterapia.es/#organization",
+        "name": "EIMA Fisioterapia",
+        "url": "https://eimafisioterapia.es/",
+        "description": "Fisioterapia y ejercicio a domicilio en Mallorca para personas con cáncer y dolor crónico. Tratamiento personalizado, basado en la evidencia, desde casa.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://eimafisioterapia.es/eima-logo.png"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://eimafisioterapia.es/og-image.png"
+        },
+        "sameAs": [
+          "https://www.instagram.com/eima.fisioterapia"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mallorca",
+          "addressRegion": "Islas Baleares",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.6953,
+          "longitude": 3.0176
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "Inca" },
+          { "@type": "Place", "name": "Manacor" },
+          { "@type": "Place", "name": "Artà" },
+          { "@type": "Place", "name": "Sineu" },
+          { "@type": "Place", "name": "Petra" },
+          { "@type": "Place", "name": "Santa Margalida" },
+          { "@type": "Place", "name": "Selva" },
+          { "@type": "Place", "name": "Llubí" },
+          { "@type": "Place", "name": "Vilafranca" },
+          { "@type": "Place", "name": "Costitx" },
+          { "@type": "Place", "name": "Mallorca" }
+        ],
+        "medicalSpecialty": "Physiotherapy",
+        "knowsAbout": [
+          "fisioterapia oncológica",
+          "ejercicio terapéutico",
+          "dolor crónico",
+          "rehabilitación oncológica",
+          "fisioterapia a domicilio",
+          "ejercicio para pacientes con cáncer"
+        ],
+        "priceRange": "€€",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+34 658 52 10 77",
+            "email": "info@eimafisioterapia.es",
+            "availableLanguage": ["es", "ca"]
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Jaume Sansó Servera",
+            "jobTitle": "Fisioterapeuta especializado en ejercicio y cáncer",
+            "worksFor": { "@id": "https://eimafisioterapia.es/#organization" }
+          },
+          {
+            "@type": "Person",
+            "name": "Miquel Galmés Vives",
+            "jobTitle": "Fisioterapeuta especializado en ejercicio y dolor oncológico",
+            "worksFor": { "@id": "https://eimafisioterapia.es/#organization" }
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "SiteNavigationElement", "name": "Inicio", "url": "https://eimafisioterapia.es/" },
+          { "@type": "SiteNavigationElement", "name": "Cáncer", "url": "https://eimafisioterapia.es/cancer" },
+          { "@type": "SiteNavigationElement", "name": "Qué haremos", "url": "https://eimafisioterapia.es/que-haremos" },
+          { "@type": "SiteNavigationElement", "name": "Quiénes somos", "url": "https://eimafisioterapia.es/quienes-somos" },
+          { "@type": "SiteNavigationElement", "name": "Centro de Salud Virtual", "url": "https://eimafisioterapia.es/centro-salud-virtual" },
+          { "@type": "SiteNavigationElement", "name": "Contacto", "url": "https://eimafisioterapia.es/contacto" }
+        ]
+      }
+    </script>
+
+    %sveltekit.head%
+  </head>
+  <body class="min-h-screen font-sans">
+    <div class="min-h-screen">%sveltekit.body%</div>
+  </body>
+</html>
