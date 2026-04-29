@@ -15,7 +15,7 @@
       </p>
       <div class="mt-8 flex flex-col gap-3">
         <a
-          href="tel:+34658521077"
+          href="tel:+34604529731"
           class="inline-flex items-center gap-3 text-[15px] font-light hover:text-[color:var(--color-brand-soft)] transition-colors"
         >
           <span
@@ -23,7 +23,7 @@
           >
             <span class="material-symbols-rounded !text-[18px]">call</span>
           </span>
-          <span>+34 658 52 10 77</span>
+          <span>+34 604 52 97 31</span>
         </a>
         <a
           href="mailto:info@eimafisioterapia.es"
@@ -37,7 +37,7 @@
           <span>info@eimafisioterapia.es</span>
         </a>
         <a
-          href="https://wa.me/34658521077"
+          href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-3 text-[15px] font-light hover:text-[color:var(--color-brand-soft)] transition-colors"
@@ -65,7 +65,7 @@
           <p class="font-medium mb-1">¡Gracias! Hemos recibido tu mensaje.</p>
           <p class="font-light opacity-80">
             Te responderemos lo antes posible. Si necesitas hablar ya, puedes llamarnos al
-            <a href="tel:+34658521077" class="underline">658 52 10 77</a>.
+            <a href="tel:+34604529731" class="underline">604 52 97 31</a>.
           </p>
         </div>
       {:else}
@@ -138,7 +138,7 @@
             </p>
             <button
               type="submit"
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-7 py-3 font-medium text-[15px] hover:scale-[1.03] transition-transform"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-7 py-3 font-light text-[15px] transition-[transform,font-weight] duration-300 ease-out hover:scale-[1.03] hover:font-bold"
             >
               Enviar
             </button>

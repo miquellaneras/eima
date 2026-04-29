@@ -6,19 +6,19 @@
     </p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8 flex-wrap">
       <a
-        href="tel:+34658521077"
+        href="tel:+34604529731"
         class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-inverse px-6 py-3
-          hover:scale-102 transition-transform duration-200 font-medium"
+          hover:scale-102 transition-[transform,font-weight] duration-300 ease-out font-light hover:font-bold"
       >
         <span class="material-symbols-rounded">call</span>
-        <span>658 52 10 77</span>
+        <span>604 52 97 31</span>
       </a>
       <a
-        href="https://wa.me/34658521077"
+        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand text-brand px-6 py-3
-          hover:bg-brand hover:text-inverse transition-all duration-200 font-medium"
+          hover:bg-brand hover:text-inverse transition-[background-color,color,font-weight] duration-300 ease-out font-light hover:font-bold"
       >
         <span class="material-symbols-rounded">chat</span>
         <span>WhatsApp</span>
@@ -26,7 +26,7 @@
       <a
         href="mailto:info@eimafisioterapia.es"
         class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-default text-primary px-6 py-3
-          hover:border-brand hover:text-brand transition-all duration-200 font-medium"
+          hover:border-brand hover:text-brand transition-[border-color,color,font-weight] duration-300 ease-out font-light hover:font-bold"
       >
         <span class="material-symbols-rounded">mail</span>
         <span>info@eimafisioterapia.es</span>
@@ -34,7 +34,7 @@
       <a
         href="/contacto"
         class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-default text-primary px-6 py-3
-          hover:border-brand hover:text-brand transition-all duration-200 font-medium"
+          hover:border-brand hover:text-brand transition-[border-color,color,font-weight] duration-300 ease-out font-light hover:font-bold"
       >
         <span class="material-symbols-rounded">edit_note</span>
         <span>Formulario de contacto</span>

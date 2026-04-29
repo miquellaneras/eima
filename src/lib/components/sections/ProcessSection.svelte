@@ -6,12 +6,12 @@
 
 <section id="proceso" class="relative bg-warm py-20 md:py-28">
   <div class="mx-auto max-w-6xl px-6 md:px-10">
-    <header class="text-center mb-14 max-w-3xl mx-auto">
+    <header class="mx-auto mb-16 max-w-3xl pb-6 text-center md:mb-18 md:pb-8">
       <h2 class="text-2xl md:text-3xl">
         <span class="font-light">Cómo es </span>
         <span class="font-bold">una sesión con nosotros</span>
       </h2>
-      <p class="mt-3 text-[color:var(--color-brand-soft)] text-sm font-light">
+      <p class="mt-4 text-[color:var(--color-brand-soft)] text-sm font-light">
         Un proceso transparente en cuatro pasos. Sin sorpresas, sin prisas.
       </p>
     </header>
@@ -55,8 +55,8 @@
         >?
       </p>
       <a
-        href="/que-haremos"
-        class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-2.5 font-medium text-[15px] hover:scale-[1.03] transition-transform"
+        href="/como-funciona"
+        class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-2.5 font-light text-[15px] transition-[transform,font-weight] duration-300 ease-out hover:scale-[1.03] hover:font-bold"
       >
         Saber más
         <span class="material-symbols-rounded !text-base">arrow_forward</span>

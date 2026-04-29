@@ -7,7 +7,7 @@
   <title>Contacto | EIMA Fisioterapia</title>
   <meta
     name="description"
-    content="¿Tienes dudas o quieres reservar una primera consulta? Escríbenos, llámanos al 658 52 10 77 o envíanos un WhatsApp."
+    content="¿Tienes dudas o quieres reservar una primera consulta? Escríbenos, llámanos al 604 52 97 31 o envíanos un WhatsApp."
   />
   <link rel="canonical" href="https://eimafisioterapia.es/contacto" />
   <meta property="og:title" content="Contacto | EIMA Fisioterapia" />

@@ -25,17 +25,17 @@
       <a
         href="/contacto"
         class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-accent text-brand-dark px-6 py-3
-          hover:scale-102 transition-transform duration-200 font-medium"
+          hover:scale-102 transition-[transform,font-weight] duration-300 ease-out font-light hover:font-bold"
       >
         <span>Reservar primera consulta</span>
         <span class="material-symbols-rounded">arrow_forward</span>
       </a>
       <a
-        href="https://wa.me/34658521077"
+        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-inverse/40 text-inverse px-6 py-3
-          hover:bg-inverse hover:text-brand transition-all duration-200 font-medium"
+          hover:bg-inverse hover:text-brand transition-[background-color,color,font-weight] duration-300 ease-out font-light hover:font-bold"
       >
         <span class="material-symbols-rounded">chat</span>
         <span>Pregúntanos por WhatsApp</span>

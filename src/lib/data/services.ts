@@ -49,13 +49,5 @@ export const services: Service[] = [
     short: 'Entender lo que te pasa es el primer paso para mejorar.',
     description:
       'Dedicamos tiempo a explicarte qué ocurre en tu cuerpo y por qué hacemos lo que hacemos. Así las decisiones no dependen del fisio: dependen de ti.'
-  },
-  {
-    slug: 'centro-salud-virtual',
-    icon: 'videocam',
-    title: 'Centro de Salud Virtual',
-    short: 'Seguimiento online para continuar el trabajo entre sesiones.',
-    description:
-      'Cuando vivir lejos o la agenda complican las visitas presenciales, podemos seguir acompañándote en formato online, con planes personalizados y revisiones periódicas.'
   }
 ];

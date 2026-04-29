@@ -1,31 +1,43 @@
 export type AudienceItem = {
-  headline: string;
-  subhead: string;
+  letter: string;
   quote: string;
-  action: string;
+  actionLines: string[];
+  whatsappMessage: string;
 };
 
 export const audience: AudienceItem[] = [
   {
-    headline: 'Nunca has hecho ejercicio.',
-    subhead: 'Y no sabes cómo empezar.',
-    quote: '"Me han dicho que el ejercicio puede ayudarme. Pero no sé por dónde empezar."',
-    action:
-      'Te guiaremos con un plan claro y progresivo. Empezaremos con seguridad, sin agobios.'
+    letter: 'A',
+    quote: '“No he hecho ejercicio nunca y no sé por dónde empezar.”',
+    actionLines: [
+      'Te guiaremos con un plan claro y',
+      'progresivo. Empezaremos con',
+      'seguridad, sin agobios.'
+    ],
+    whatsappMessage:
+      'Hola, creo que encajo en el perfil de empezar desde cero. Me gustaría saber si podéis ayudarme.'
   },
   {
-    headline: 'Sí has hecho ejercicio.',
-    subhead: 'Pero dudas si lo haces bien.',
-    quote: '"Estoy haciendo algo, pero tengo dudas. Quiero mejorar sin interferir con mis tratamientos."',
-    action:
-      'Ajustaremos tu entrenamiento para que sea eficaz. Y lo haremos sostenible para tu día a día.'
+    letter: 'B',
+    quote: '“Hago algo por mi cuenta, pero no sé si ahora me conviene.”',
+    actionLines: [
+      'Ajustaremos tu entrenamiento',
+      'para que sea eficaz. Y lo haremos',
+      'sostenible para tu día a día.'
+    ],
+    whatsappMessage:
+      'Hola, ya hago algo de ejercicio, pero no sé si lo estoy adaptando bien a mi situación. Me gustaría saber si podéis ayudarme.'
   },
   {
-    headline: 'Quieres hacer ejercicio.',
-    subhead: 'Pero el dolor te frena.',
-    quote: '"Quiero hacer ejercicio, pero me da miedo empeorar. No sé qué ejercicios me convienen ahora."',
-    action:
-      'Aprenderás a moverte con confianza. Y a progresar sin miedo, incluso con dolor.'
+    letter: 'C',
+    quote: '“Sé que moverme me puede ayudar, pero tengo dolor o fatiga.”',
+    actionLines: [
+      'Aprenderás a moverte con',
+      'confianza. Y a progresar sin miedo,',
+      'incluso con dolor o fatiga.'
+    ],
+    whatsappMessage:
+      'Hola, quiero moverme, pero el dolor y/o la fatiga me están frenando. Me gustaría saber si podéis ayudarme.'
   }
 ];
 

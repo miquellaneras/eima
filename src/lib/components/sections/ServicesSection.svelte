@@ -4,7 +4,7 @@
 
 <section id="servicios" class="max-w-7xl mx-auto px-8 md:px-16">
   <header class="text-center mb-12 max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-semibold text-primary">Qué haremos juntos</h2>
+    <h2 class="text-3xl md:text-4xl font-semibold text-primary">Cómo funciona</h2>
     <p class="text-lg text-secondary mt-4">
       Combinamos lo que la evidencia dice que funciona con lo que tú necesitas. Siempre en este orden.
     </p>

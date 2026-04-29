@@ -3,6 +3,8 @@
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/500.css';
 @import '@fontsource/inter/700.css';
+@import '@fontsource/noto-serif/400.css';
+@import '@fontsource/noto-serif/700.css';
 @import '@fontsource/noto-serif/400-italic.css';
 @import '@fontsource/noto-serif/700-italic.css';
 
@@ -19,6 +21,14 @@ body {
 .font-serif-italic {
   font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
   font-style: italic;
+}
+
+.font-display-serif {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.font-noto-serif {
+  font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
 }
 
 .material-symbols-rounded {

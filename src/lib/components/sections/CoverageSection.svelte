@@ -53,7 +53,7 @@
         />
         <button
           type="submit"
-          class="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-3 font-medium text-[15px] hover:scale-[1.03] transition-transform whitespace-nowrap"
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-3 font-light text-[15px] transition-[transform,font-weight] duration-300 ease-out hover:scale-[1.03] hover:font-bold whitespace-nowrap"
         >
           Enviar mi zona
         </button>

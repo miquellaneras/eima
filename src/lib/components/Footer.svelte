@@ -3,10 +3,8 @@
 
   const pageLinks = [
     { href: '/', label: 'Inicio' },
-    { href: '/cancer', label: 'Cáncer' },
-    { href: '/que-haremos', label: 'Qué haremos' },
+    { href: '/como-funciona', label: 'Cómo funciona' },
     { href: '/quienes-somos', label: 'Quiénes somos' },
-    { href: '/centro-salud-virtual', label: 'Centro de Salud Virtual' },
     { href: '/contacto', label: 'Contacto' },
     { href: '/blog', label: 'Blog' }
   ];
@@ -38,7 +36,7 @@
           </svg>
         </a>
         <a
-          href="tel:+34658521077"
+          href="tel:+34604529731"
           aria-label="Llamar"
           class="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center hover:bg-white/10 transition-colors"
         >

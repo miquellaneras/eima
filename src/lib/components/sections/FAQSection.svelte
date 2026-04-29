@@ -78,11 +78,12 @@
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 text-center">
       <p class="text-[15px] font-light">¿Todavía tienes dudas?</p>
       <a
-        href="tel:+34658521077"
-        class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-2.5 font-medium text-[15px] hover:scale-[1.03] transition-transform"
+        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-2.5 font-light text-[15px] transition-[transform,font-weight] duration-300 ease-out hover:scale-[1.03] hover:font-bold"
       >
-        <span class="material-symbols-rounded !text-base">call</span>
-        Llámanos
+        Contáctanos
       </a>
     </div>
   </div>
