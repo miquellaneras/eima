@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import '@fontsource/inter/300.css';
 @import '@fontsource/inter/400.css';
@@ -5,6 +6,7 @@
 @import '@fontsource/inter/700.css';
 @import '@fontsource/noto-serif/400.css';
 @import '@fontsource/noto-serif/700.css';
+@import '@fontsource/noto-serif/300-italic.css';
 @import '@fontsource/noto-serif/400-italic.css';
 @import '@fontsource/noto-serif/700-italic.css';
 
@@ -53,7 +55,7 @@ body {
   --color-brand-accent: #8cd0d6;
   --color-brand-dark: #24404d;
   --color-brand-deepest: #0e1d26;
-  --color-surface: #f5f4f9;
+  --color-surface: #f8f4f0;
   --color-surface-warm: #f3ece0;
   --color-inverse: #ffffff;
   --radius-pill: 9999px;
@@ -162,6 +164,58 @@ body {
   padding: 0.65rem 1.4rem;
   font-weight: 400;
   transition: all 200ms ease;
+}
+
+.cta-arrow-button {
+  gap: 0.55rem;
+}
+
+.cta-arrow-swap {
+  display: grid;
+  flex: none;
+  height: 1.25rem;
+  place-items: center;
+  position: relative;
+  width: 1.25rem;
+  z-index: 1;
+}
+
+.cta-arrow-swap svg {
+  display: block;
+  height: 1.25rem;
+  position: absolute;
+  transition:
+    opacity 220ms ease-out,
+    transform 220ms ease-out;
+  width: 1.25rem;
+}
+
+.cta-arrow-swap__right {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.cta-arrow-swap__up {
+  opacity: 0;
+  transform: translate3d(-0.12rem, 0.12rem, 0) scale(0.88);
+}
+
+.cta-arrow-button:hover .cta-arrow-swap__right,
+.cta-arrow-button:focus-visible .cta-arrow-swap__right {
+  opacity: 0;
+  transform: translate3d(0.12rem, -0.12rem, 0) scale(0.88);
+}
+
+.cta-arrow-button:hover .cta-arrow-swap__up,
+.cta-arrow-button:focus-visible .cta-arrow-swap__up {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-arrow-swap svg {
+    transition: none;
+  }
 }
 
 @utility card-soft {

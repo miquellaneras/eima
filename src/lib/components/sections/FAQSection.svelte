@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
   import { faqs } from '$lib/data/faqs';
   import { slide } from 'svelte/transition';
 
@@ -78,7 +79,7 @@
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 text-center">
       <p class="text-[15px] font-light">¿Todavía tienes dudas?</p>
       <a
-        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+        href={WEB_WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] px-6 py-2.5 font-light text-[15px] transition-[transform,font-weight] duration-300 ease-out hover:scale-[1.03] hover:font-bold"
@@ -88,3 +89,7 @@
     </div>
   </div>
 </section>
+
+
+
+

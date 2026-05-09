@@ -1,34 +1,30 @@
 <script>
   import ContactFormSection from '$lib/components/sections/ContactFormSection.svelte';
+
   export let form;
 </script>
 
 <svelte:head>
-  <title>Contacto | EIMA Fisioterapia</title>
+  <title>Contacto | Fisioterapia oncológica a domicilio en Mallorca</title>
   <meta
     name="description"
-    content="¿Tienes dudas o quieres reservar una primera consulta? Escríbenos, llámanos al 604 52 97 31 o envíanos un WhatsApp."
+    content="Escríbenos o llámanos para contarnos tu caso. Te diremos con honestidad si Empenta puede ayudarte durante o después del cáncer."
   />
   <link rel="canonical" href="https://eimafisioterapia.es/contacto" />
-  <meta property="og:title" content="Contacto | EIMA Fisioterapia" />
+  <meta property="og:title" content="Contacto | Fisioterapia oncológica a domicilio en Mallorca" />
+  <meta
+    property="og:description"
+    content="Cuéntanos tu caso sin compromiso. Valoramos si podemos ayudarte con fisioterapia oncológica y ejercicio a domicilio en Mallorca."
+  />
   <meta property="og:url" content="https://eimafisioterapia.es/contacto" />
   <meta property="og:image" content="https://eimafisioterapia.es/og-image.png" />
+  <meta property="og:image:alt" content="EIMA Fisioterapia — Contacto" />
+  <meta name="twitter:title" content="Contacto | Fisioterapia oncológica a domicilio en Mallorca" />
+  <meta
+    name="twitter:description"
+    content="Cuéntanos tu caso sin compromiso. Valoramos si podemos ayudarte con fisioterapia oncológica y ejercicio a domicilio en Mallorca."
+  />
+  <meta name="twitter:image" content="https://eimafisioterapia.es/og-image.png" />
 </svelte:head>
-
-<section class="pt-16 pb-6">
-  <div class="mx-auto max-w-6xl px-6 md:px-10">
-    <nav aria-label="Migas de pan" class="text-sm font-light opacity-70 mb-6">
-      <a href="/" class="hover:opacity-100">Inicio</a>
-      <span aria-hidden="true" class="mx-2">/</span>
-      <span>Contacto</span>
-    </nav>
-    <header class="max-w-3xl">
-      <h1 class="text-3xl md:text-5xl leading-tight">
-        <span class="font-light">Hablemos. La primera toma de contacto es </span>
-        <span class="font-bold">gratuita.</span>
-      </h1>
-    </header>
-  </div>
-</section>
 
 <ContactFormSection {form} />

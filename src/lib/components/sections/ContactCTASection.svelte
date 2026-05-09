@@ -1,3 +1,7 @@
+<script>
+  import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
+</script>
+
 <section class="max-w-7xl mx-auto px-8 md:px-16">
   <div class="bg-primary border border-default rounded-3xl p-8 md:p-12 text-center">
     <h2 class="text-3xl md:text-4xl font-semibold text-primary">Hablemos</h2>
@@ -14,7 +18,7 @@
         <span>604 52 97 31</span>
       </a>
       <a
-        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+        href={WEB_WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand text-brand px-6 py-3

@@ -1,4 +1,5 @@
 <script>
+  import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
   import { page } from '$app/stores';
 
   export let mobileMenuOpen = false;
@@ -12,10 +13,15 @@
     { href: '/blog', label: 'Blog' }
   ];
 
-  $: pathname = $page.url.pathname;
+  function normalizePath(path) {
+    const normalized = decodeURIComponent(path).replace(/\/+$/, '');
+    return normalized === '' ? '/' : normalized;
+  }
 
-  function isActive(href) {
-    return href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
+  function isActive(currentPath, href) {
+    const pathname = normalizePath(currentPath);
+    const target = normalizePath(href);
+    return target === '/' ? pathname === '/' : pathname === target || pathname.startsWith(`${target}/`);
   }
 </script>
 
@@ -30,9 +36,9 @@
     {#each links as link (link.href)}
       <a
         href={link.href}
-        aria-current={isActive(link.href) ? 'page' : undefined}
+        aria-current={isActive($page.url.pathname, link.href) ? 'page' : undefined}
         class="border-b border-[#ece3d8] py-2 text-xl transition-[color,font-weight]
-          {isActive(link.href)
+          {isActive($page.url.pathname, link.href)
             ? 'font-bold text-[color:var(--color-brand)]'
             : 'font-light text-[color:var(--color-brand-soft)]'}"
         on:click={onClose}
@@ -42,10 +48,10 @@
     {/each}
 
     <a
-      href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+      href={WEB_WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      class="mobile-menu-cta mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] px-6 py-3 font-light text-[color:var(--color-brand)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out hover:scale-[1.03] hover:bg-[#4083A7] hover:text-white hover:font-bold hover:shadow-[0_10px_24px_rgba(64,131,167,0.28)]"
+      class="mobile-menu-cta mt-6 inline-flex w-fit self-center items-center justify-center gap-2 rounded-full bg-[color:var(--color-brand-accent)] px-6 py-3 font-light text-[color:var(--color-brand)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out hover:scale-[1.03] hover:bg-[#4083A7] hover:text-white hover:font-bold hover:shadow-[0_10px_24px_rgba(64,131,167,0.28)]"
       on:click={onClose}
     >
       <svg class="h-4 w-4" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
@@ -83,3 +89,7 @@
     z-index: 1;
   }
 </style>
+
+
+
+

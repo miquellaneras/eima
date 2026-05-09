@@ -1,4 +1,5 @@
 <script>
+  import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
 
@@ -31,21 +32,23 @@
     pathname === '/' ||
     pathname === '/como-funciona' ||
     pathname === '/quienes-somos' ||
+    pathname === '/contacto' ||
     pathname === '/blog' ||
     pathname.startsWith('/blog/');
   $: transparent = hasDarkHero && !scrolled && !mobileMenuOpen;
+  $: lightHeader = transparent;
 </script>
 
 <svelte:window on:scroll={updateScrolled} />
 
 <header
   class="fixed top-0 z-40 w-full transition-colors duration-300
-    {transparent ? 'bg-transparent' : 'bg-[#F8F4F0]'}"
+    {lightHeader ? 'bg-transparent' : 'bg-[#F8F4F0]'}"
 >
   <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-10">
     <a href="/" aria-label="Inicio" class="flex items-center">
       <img
-        src={transparent ? '/eima-logo.png' : '/eima-logo-white.png'}
+        src={lightHeader ? '/eima-logo.png' : '/eima-logo-white.png'}
         alt="EIMA Fisioterapia"
         class="h-10 w-auto md:h-12"
       />
@@ -58,10 +61,10 @@
           aria-current={isActive(link.href, pathname) ? 'page' : undefined}
           class="relative text-[15px] transition-[color,font-weight] duration-300 ease-out after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out hover:font-bold hover:after:scale-x-100
             {isActive(link.href, pathname)
-              ? transparent
+              ? lightHeader
                 ? 'font-bold text-white after:scale-x-100'
                 : 'font-bold text-[color:var(--color-brand)] after:scale-x-100'
-              : transparent
+              : lightHeader
                 ? 'font-light text-white/90 hover:text-white'
                 : 'font-light text-[color:var(--color-brand-soft)] hover:text-[color:var(--color-brand)]'}"
         >
@@ -70,11 +73,11 @@
       {/each}
 
       <a
-        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+        href={WEB_WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
         class="header-cta inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-light transition-[background-color,color,transform,font-weight,box-shadow] duration-300 ease-out hover:scale-[1.03]
-          {transparent
+          {lightHeader
             ? 'border border-white/60 text-white hover:bg-white/10 hover:font-bold'
             : 'bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] hover:bg-[#4083A7] hover:text-white hover:font-bold hover:shadow-[0_10px_24px_rgba(64,131,167,0.28)]'}"
         aria-label="Contactar por WhatsApp"
@@ -95,18 +98,18 @@
       <span class="relative block h-6 w-6" aria-hidden="true">
         <span
           class="absolute left-0 right-0 top-1 block h-[2px] rounded transition-transform duration-200
-            {transparent ? 'bg-white' : 'bg-[color:var(--color-brand)]'}"
+            {lightHeader ? 'bg-white' : 'bg-[color:var(--color-brand)]'}"
           class:translate-y-[7px]={mobileMenuOpen}
           class:rotate-45={mobileMenuOpen}
         ></span>
         <span
           class="absolute left-0 right-0 top-1/2 block h-[2px] -translate-y-1/2 rounded transition-opacity duration-200
-            {transparent ? 'bg-white' : 'bg-[color:var(--color-brand)]'}"
+            {lightHeader ? 'bg-white' : 'bg-[color:var(--color-brand)]'}"
           class:opacity-0={mobileMenuOpen}
         ></span>
         <span
           class="absolute bottom-1 left-0 right-0 block h-[2px] rounded transition-transform duration-200
-            {transparent ? 'bg-white' : 'bg-[color:var(--color-brand)]'}"
+            {lightHeader ? 'bg-white' : 'bg-[color:var(--color-brand)]'}"
           class:-translate-y-[7px]={mobileMenuOpen}
           class:-rotate-45={mobileMenuOpen}
         ></span>

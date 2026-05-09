@@ -27,22 +27,30 @@
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto mb-10 max-w-4xl text-center md:mb-12">
       <h2
-        class="font-display-serif text-[1.95rem] leading-[1.02] font-medium text-[color:var(--color-brand)] md:whitespace-nowrap md:text-[40px]"
+        class="audience-title font-display-serif text-[2.2rem] leading-[1.04] font-medium tracking-[0] text-[color:var(--color-brand)] md:text-[48px]"
       >
-        ¿Te ves reflejado en alguna de estas situaciones?
+        <span class="md:block">¿Te ves reflejado/a en alguna</span>
+        <span class="md:block">
+          de
+          <span
+            class="text-[#4083A7]"
+            style="font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;"
+            >estas situaciones</span
+          ><span
+            class="text-[#4083A7]"
+            style="font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;"
+            >?</span
+          >
+        </span>
       </h2>
       <p class="text-muted mt-4 text-[13px] font-light leading-relaxed md:text-base">
         No todo el mundo parte del mismo punto. Por eso adaptamos el proceso a tu caso.
       </p>
     </header>
 
-    <div class="grid gap-7 justify-items-center md:grid-cols-3 md:gap-8 lg:gap-10">
+    <div class="audience-grid grid gap-7 justify-items-center md:grid-cols-3 md:gap-8 lg:gap-10">
       {#each audience as item, i (item.letter)}
-        <div
-          use:revealOnScroll
-          class="audience-reveal"
-          style={`--reveal-delay: ${i * 90}ms`}
-        >
+        <div use:revealOnScroll class="audience-reveal" style={`--reveal-delay: ${i * 90}ms`}>
           <article
             class="audience-card flex h-full w-full max-w-[19.6rem] flex-col rounded-[8px] border border-transparent bg-white px-3 py-3 text-center shadow-[0_14px_34px_rgba(14,29,38,0.10)] md:mx-auto md:min-h-[20rem] md:max-w-[18.75rem] md:px-3.5 md:pb-3 md:pt-3.5"
           >
@@ -52,11 +60,11 @@
               <span class="audience-letter font-display-serif">{item.letter}</span>
             </div>
 
-            <p
+            <h3
               class="font-noto-serif mx-auto mt-3 min-h-[4.9rem] max-w-[17.4rem] text-[1.45rem] leading-[1.05] text-[color:var(--color-brand)] md:min-h-[5.1rem] md:max-w-[17.6rem] md:text-[1.54rem]"
             >
               {item.quote}
-            </p>
+            </h3>
 
             <div class="mx-auto mt-4 h-px w-[4.75rem] bg-[color:var(--color-brand-accent)]"></div>
 
@@ -72,10 +80,21 @@
               href={`https://wa.me/34604529731?text=${encodeURIComponent(item.whatsappMessage)}`}
               target="_blank"
               rel="noreferrer"
-              class="audience-button mt-5 inline-flex items-center justify-center gap-2.5 self-center rounded-full bg-[color:var(--color-brand-accent)] px-5 py-2.5 text-[13px] font-medium text-[color:var(--color-brand)] shadow-[0_6px_14px_rgba(14,29,38,0.12)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out md:mt-4 md:px-[1.4rem] md:py-[0.8rem]"
+              class="audience-button cta-arrow-button mt-5 inline-flex items-center justify-center gap-2.5 self-center rounded-full bg-[color:var(--color-brand-accent)] px-5 py-2.5 text-[13px] font-medium text-[color:var(--color-brand)] shadow-[0_6px_14px_rgba(14,29,38,0.12)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out md:mt-4 md:px-[1.4rem] md:py-[0.8rem]"
             >
               <span class="audience-button-label">Ver si es para mí</span>
-              <span class="material-symbols-rounded audience-button-arrow !text-[20px]">arrow_forward</span>
+              <span class="cta-arrow-swap" aria-hidden="true">
+                <svg class="cta-arrow-swap__right" viewBox="0 0 256 256" fill="currentColor">
+                  <path
+                    d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
+                  ></path>
+                </svg>
+                <svg class="cta-arrow-swap__up" viewBox="0 0 256 256" fill="currentColor">
+                  <path
+                    d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"
+                  ></path>
+                </svg>
+              </span>
             </a>
           </article>
         </div>
@@ -97,11 +116,7 @@
         style="--reveal-delay: 90ms"
         aria-hidden="true"
       >
-        <img
-          src="/download_130837.png"
-          alt=""
-          class="h-10 w-auto opacity-80 md:h-12"
-        />
+        <img src="/download_130837.png" alt="" class="h-10 w-auto opacity-80 md:h-12" />
       </div>
       <p
         use:revealOnScroll
@@ -120,6 +135,11 @@
     display: block;
     line-height: 1;
     transform: translateY(-0.03em);
+  }
+
+  .audience-title,
+  .audience-title * {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
   }
 
   .audience-reveal {
@@ -159,6 +179,14 @@
     transform: translateY(-4px) scale(1.02);
   }
 
+  @media (hover: hover) {
+    .audience-grid:has(.audience-card:hover) .audience-card:not(:hover) {
+      filter: saturate(0.85);
+      opacity: 0.38;
+      transform: scale(0.988);
+    }
+  }
+
   .audience-button {
     overflow: hidden;
     position: relative;
@@ -176,22 +204,17 @@
     width: 44%;
   }
 
-  .audience-button-label,
-  .audience-button-arrow {
+  .audience-button-label {
     position: relative;
     z-index: 1;
-  }
-
-  .audience-button-arrow {
-    transition: transform 300ms ease-out;
   }
 
   .audience-card:hover .audience-button,
   .audience-button:hover {
     background: #4083a7;
     box-shadow: 0 9px 18px rgba(14, 29, 38, 0.16);
-    font-weight: 700;
     color: #ffffff;
+    font-weight: 700;
     transform: translateY(-1px);
   }
 
@@ -200,9 +223,14 @@
     transform: translateX(260%) skewX(-18deg);
   }
 
-  .audience-card:hover .audience-button-arrow,
-  .audience-button:hover .audience-button-arrow {
-    transform: translateX(5px);
+  .audience-card:hover .audience-button :global(.cta-arrow-swap__right) {
+    opacity: 0;
+    transform: translate3d(0.12rem, -0.12rem, 0) scale(0.88);
+  }
+
+  .audience-card:hover .audience-button :global(.cta-arrow-swap__up) {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -210,8 +238,7 @@
     .audience-fade,
     .audience-card,
     .audience-button,
-    .audience-button::before,
-    .audience-button-arrow {
+    .audience-button::before {
       transition: none;
     }
   }

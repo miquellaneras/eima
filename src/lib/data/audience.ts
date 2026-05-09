@@ -1,3 +1,5 @@
+import { WEB_WHATSAPP_MESSAGE } from '$lib/data/whatsapp';
+
 export type AudienceItem = {
   letter: string;
   quote: string;
@@ -14,8 +16,7 @@ export const audience: AudienceItem[] = [
       'progresivo. Empezaremos con',
       'seguridad, sin agobios.'
     ],
-    whatsappMessage:
-      'Hola, creo que encajo en el perfil de empezar desde cero. Me gustaría saber si podéis ayudarme.'
+    whatsappMessage: WEB_WHATSAPP_MESSAGE
   },
   {
     letter: 'B',
@@ -25,8 +26,7 @@ export const audience: AudienceItem[] = [
       'para que sea eficaz. Y lo haremos',
       'sostenible para tu día a día.'
     ],
-    whatsappMessage:
-      'Hola, ya hago algo de ejercicio, pero no sé si lo estoy adaptando bien a mi situación. Me gustaría saber si podéis ayudarme.'
+    whatsappMessage: WEB_WHATSAPP_MESSAGE
   },
   {
     letter: 'C',
@@ -36,8 +36,7 @@ export const audience: AudienceItem[] = [
       'confianza. Y a progresar sin miedo,',
       'incluso con dolor o fatiga.'
     ],
-    whatsappMessage:
-      'Hola, quiero moverme, pero el dolor y/o la fatiga me están frenando. Me gustaría saber si podéis ayudarme.'
+    whatsappMessage: WEB_WHATSAPP_MESSAGE
   }
 ];
 

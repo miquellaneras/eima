@@ -34,7 +34,7 @@
     {
       title: 'Menos desplazamientos',
       bodyLines: [
-        'Ya tienes suficientes citas, revisiones y d\u00edas complicados.',
+        'Ya tienes suficientes citas, revisiones y días duros.',
         'Por eso priorizamos un formato que te ayude sin a\u00f1adir m\u00e1s carga a una etapa que ya puede ser <strong>f\u00edsica y mentalmente exigente.</strong>'
       ],
       icon: 'car'
@@ -155,7 +155,7 @@
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto max-w-4xl pb-8 text-center md:pb-10">
       <h2
-        class="font-display-serif text-[1.95rem] leading-[1.02] font-medium text-[color:var(--color-brand)] md:text-[40px]"
+        class="font-display-serif text-[2.2rem] leading-[1.04] font-medium tracking-[0] text-[color:var(--color-brand)] md:text-[48px]"
       >
         Ganarás
         <span style="color: #4083A7; font-family: inherit; font-size: inherit; font-weight: inherit;"
@@ -242,11 +242,22 @@
 
       <div class="mt-7 flex justify-center">
         <a
-          href="/como-funciona"
-          class="value-cta inline-flex items-center justify-center gap-2 rounded-full bg-[#8CD0D6] px-7 py-3 text-[15px] font-medium text-[color:var(--color-brand)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out hover:scale-[1.03] hover:bg-[#4083A7] hover:font-bold hover:text-white hover:shadow-[0_10px_24px_rgba(64,131,167,0.28)]"
+          href="/como-funciona#program-steps"
+          class="value-cta cta-arrow-button inline-flex items-center justify-center gap-2 rounded-full bg-[#8CD0D6] px-7 py-3 text-[15px] font-medium text-[color:var(--color-brand)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out hover:scale-[1.03] hover:bg-[#4083A7] hover:font-bold hover:text-white hover:shadow-[0_10px_24px_rgba(64,131,167,0.28)]"
         >
-          Ver c&oacute;mo funciona Empenta
-          <span class="material-symbols-rounded !text-[20px]">arrow_forward</span>
+          <span class="value-cta__label">Ver c&oacute;mo funciona Empenta</span>
+          <span class="cta-arrow-swap" aria-hidden="true">
+            <svg class="cta-arrow-swap__right" viewBox="0 0 256 256" fill="currentColor">
+              <path
+                d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
+              ></path>
+            </svg>
+            <svg class="cta-arrow-swap__up" viewBox="0 0 256 256" fill="currentColor">
+              <path
+                d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"
+              ></path>
+            </svg>
+          </span>
         </a>
       </div>
     </div>
@@ -497,7 +508,7 @@
     transform: translateX(260%) skewX(-18deg);
   }
 
-  .value-cta :global(*) {
+  .value-cta__label {
     position: relative;
     z-index: 1;
   }
@@ -533,7 +544,7 @@
     .timeline__item:not(.js-is-show) .timeline__card,
     .timeline__item.timeline__item--reverse:not(.js-is-show) .timeline__card,
     .timeline__item:not(.timeline__item--reverse):not(.js-is-show) .timeline__card {
-      transform: translate3d(-34px, 0, 0);
+      transform: translate3d(34px, 0, 0);
     }
 
     .timeline__card-arrow {

@@ -1,4 +1,5 @@
 <script>
+  import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
   /** @param {HTMLElement} node */
   function revealOnScroll(node) {
     const observer = new IntersectionObserver(
@@ -39,24 +40,29 @@
   ];
 </script>
 
-<section class="relative bg-[#f8f4f0] pb-12 pt-20 md:pb-14 md:pt-24">
+<section class="relative bg-[#233F4E] pb-12 pt-20 md:pb-14 md:pt-24">
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto max-w-4xl text-center">
       <h2
-        class="font-display-serif text-[1.95rem] leading-[1.02] font-medium text-[color:var(--color-brand)] md:text-[40px]"
+        class="font-display-serif text-[2.2rem] leading-[1.04] font-medium tracking-[0] text-white md:text-[48px]"
       >
-        Si ahora mismo te pasa algo de esto
+        Si ahora mismo
+        <span
+          class="text-[#8CD0D6]"
+          style="font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;"
+          >te pasa algo de esto</span
+        >
       </h2>
     </header>
 
     <div
-      class="mt-10 grid gap-10 md:mt-12 md:grid-cols-[minmax(0,1fr)_minmax(21rem,24rem)] md:items-stretch md:gap-12 lg:gap-14"
+      class="common-situations-grid mt-10 grid gap-10 md:mt-12 md:grid-cols-[minmax(0,1fr)_minmax(21rem,24rem)] md:items-stretch md:gap-7"
     >
-      <div class="flex flex-col gap-[1.35rem] md:mx-auto md:max-w-[40rem] md:gap-7">
+      <div class="common-situations-list flex flex-col gap-[1.35rem] md:mx-auto md:max-w-[40rem] md:gap-7">
         {#each situations as item, i (item.body)}
           <article
             use:revealOnScroll
-            class="common-drop situation-card grid grid-cols-[auto_1fr] items-center gap-4 rounded-[8px] border border-transparent bg-white px-4 py-4 shadow-[0_12px_30px_rgba(14,29,38,0.08)] transition-[border-color,box-shadow] duration-300 ease-out md:px-5"
+            class="common-drop situation-card grid grid-cols-[auto_1fr] items-center gap-4 rounded-[8px] border border-white/16 bg-white/[0.06] px-4 py-4 shadow-[0_20px_44px_rgba(7,16,22,0.22)] transition-[border-color,background-color,box-shadow] duration-300 ease-out md:px-5"
             style={`--reveal-delay: ${i * 90}ms`}
           >
             <div
@@ -97,8 +103,8 @@
               {/if}
             </div>
 
-            <div class="border-l border-[color:var(--color-brand-accent)]/35 pl-5">
-              <p class="text-[16px] leading-[1.5] text-[color:var(--color-brand)]">
+            <div class="border-l border-[#8CD0D6]/45 pl-5">
+              <p class="text-[16px] leading-[1.5] text-white/86">
                 {@html item.body}
               </p>
             </div>
@@ -112,17 +118,17 @@
         style="--reveal-delay: 270ms"
       >
         <div
-          class="relative w-full max-w-[22rem] overflow-hidden rounded-[10px] shadow-[0_20px_44px_rgba(14,29,38,0.2)] md:h-full md:w-[24rem] md:max-w-none"
+          class="relative aspect-square w-full max-w-[22rem] overflow-hidden rounded-[10px] shadow-[0_20px_44px_rgba(7,16,22,0.34)] md:h-full md:w-[24rem] md:max-w-none md:aspect-auto"
         >
           <img
-            src="/buyer-persona-Cx-2.png"
-            alt="Acompañamiento cercano en casa"
-            class="absolute inset-0 h-full w-full object-cover"
+            src="/Gemini_Generated_Image_9qc58c9qc58c9qc5-50.png"
+            alt="Mujer sentada en un sofá durante un momento difícil"
+            class="absolute inset-0 h-full w-full object-cover object-[48%_center]"
           />
-          <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,29,38,0.38)_0%,rgba(14,29,38,0.52)_45%,rgba(14,29,38,0.72)_100%)]"></div>
+          <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,29,38,0.34)_0%,rgba(14,29,38,0.56)_45%,rgba(14,29,38,0.78)_100%)]"></div>
 
           <div class="relative flex h-full flex-col items-center justify-center px-7 pb-5 pt-5 text-center">
-            <h3 class="font-noto-serif text-[28px] leading-[1.03] text-white md:text-[28px]">
+            <h3 class="common-situations-title text-[24px] leading-[1.03] text-white md:text-[28px]">
               <span class="block">Tienes que saber que</span>
               <span class="block">
                 <span class="font-bold">NO</span>
@@ -130,12 +136,12 @@
               </span>
             </h3>
 
-            <div class="mt-7 h-px w-24 bg-[#8CD0D6]"></div>
+            <div class="mt-4 h-px w-24 bg-[#8CD0D6] md:mt-7"></div>
 
-            <div class="mt-8 max-w-[17.4rem] text-[18px] leading-[1.6] text-white/92">
+            <div class="mt-5 max-w-[17.4rem] text-[16px] leading-[1.48] text-white/92 md:mt-8 md:text-[18px] md:leading-[1.6]">
               <p>Esto le pasa a muchas personas durante y después del tratamiento.</p>
-              <p class="mt-4">Y no significa que estés fallando.</p>
-              <p class="mt-4">
+              <p class="mt-3 md:mt-4">Y no significa que estés fallando.</p>
+              <p class="mt-3 md:mt-4">
                 Significa que
                 <strong class="font-bold">necesitas una guía adaptada</strong>
                 a tu momento actual.
@@ -147,12 +153,12 @@
     </div>
 
     <div class="mx-auto mt-10 max-w-4xl text-center md:mt-12">
-      <p class="text-[15px] leading-relaxed text-[color:var(--color-brand)] md:text-[1.05rem]">
+      <p class="text-[15px] leading-relaxed text-white/84 md:text-[1.05rem]">
         Por eso, no se trata de moverte sin más, sino de hacerlo de una forma que te ayude de
         verdad en tu día a día.
       </p>
       <a
-        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+        href={WEB_WHATSAPP_HREF}
         target="_blank"
         rel="noreferrer"
         class="common-cta mt-5 inline-flex items-center justify-center rounded-full bg-[#8CD0D6] px-6 py-3 text-[15px] font-medium text-[color:var(--color-brand)] transition-[transform,background-color,color,font-weight,box-shadow] duration-300 ease-out hover:scale-[1.03] hover:bg-[#4083A7] hover:font-bold hover:text-white hover:shadow-[0_10px_24px_rgba(64,131,167,0.28)]"
@@ -166,7 +172,8 @@
 <style>
   .situation-card:hover {
     border-color: #8cd0d6;
-    box-shadow: 0 16px 34px rgba(14, 29, 38, 0.11);
+    background: rgba(255, 255, 255, 0.085);
+    box-shadow: 0 16px 34px rgba(7, 16, 22, 0.18);
   }
 
   .common-drop {
@@ -217,6 +224,21 @@
   .common-cta :global(*) {
     position: relative;
     z-index: 1;
+  }
+
+  .common-situations-title,
+  .common-situations-title * {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif !important;
+  }
+
+  @media (min-width: 768px) {
+    .common-situations-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(21rem, 24rem);
+    }
+
+    .common-situations-list {
+      justify-content: space-between;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {

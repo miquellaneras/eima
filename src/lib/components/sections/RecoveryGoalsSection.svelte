@@ -49,16 +49,22 @@
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto max-w-4xl text-center">
       <h2
-        class="font-display-serif text-[1.95rem] leading-[1.02] font-medium text-[color:var(--color-brand)] md:text-[40px]"
+        class="font-display-serif text-[2.2rem] leading-[1.04] font-medium tracking-[0] text-[color:var(--color-brand)] md:text-[48px]"
       >
-        Lo que queremos ayudarte a conseguir
+        Lo que queremos
+        <span
+          class="text-[#4083A7]"
+          style="font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;"
+          >ayudarte a conseguir</span
+        >
+        <span class="sr-only">. Las 3R de tu recuperación</span>
       </h2>
       <p
         class="text-muted mx-auto mt-4 max-w-4xl text-[13px] font-light leading-relaxed md:text-base"
       >
-        No buscamos que hagas ejercicio por hacer. Buscamos que te ayude de verdad en esta etapa:
+        ¿Sabes cuáles son los beneficios de hacer ejercicio durante y después del cáncer?
         <br class="hidden md:block" />
-        para que te sientas mejor y vuelvas a tu día a día con más confianza.
+        Podemos resumirlos en un concepto:
       </p>
     </header>
 
@@ -71,7 +77,7 @@
         class="w-full max-w-[20.75rem] rounded-[8px] bg-white px-5 py-5 text-center shadow-[0_14px_34px_rgba(14,29,38,0.10)] md:max-w-none md:px-6"
       >
         <p
-          class="text-[22px] font-light leading-tight text-[#4083A7] md:text-[30px]"
+          class="recovery-goals-title text-[22px] font-light leading-tight text-[#4083A7] md:text-[36px]"
           aria-label="Las 3R de tu recuperación"
         >
           <span>Las&nbsp;</span><span class="font-bold text-[#233F4E]">3R</span><span
@@ -117,9 +123,9 @@
             </div>
           </div>
 
-          <h3 class="font-noto-serif leading-none text-[color:var(--color-brand)]">
-            <span class="text-[40px] font-bold leading-none">{goal.title.slice(0, 1)}</span
-            ><span class="text-[36px] leading-none">{goal.title.slice(1)}</span>
+          <h3 class="recovery-goal-heading font-noto-serif leading-none text-[color:var(--color-brand)]">
+            {goal.title}
+            <span class="sr-only"> {goal.subtitle}</span>
           </h3>
           <p class="mt-4 text-[14px] font-medium leading-[1.45] text-[#4083A7] md:text-[15px]">
             {goal.subtitle}
@@ -167,9 +173,32 @@
     transform: translate3d(0, 0, 0);
   }
 
+  .recovery-goals-title,
+  .recovery-goals-title * {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif !important;
+  }
+
+  .recovery-goal-heading {
+    font-size: 36px;
+  }
+
+  .recovery-goal-heading::first-letter {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  @media (hover: hover) {
+    .recovery-card:hover {
+      border-color: #8cd0d6;
+      box-shadow: 0 22px 48px rgba(14, 29, 38, 0.16);
+      transform: translate3d(0, -6px, 0);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .recovery-drop,
-    .recovery-rise {
+    .recovery-rise,
+    .recovery-card {
       transition: none;
     }
   }

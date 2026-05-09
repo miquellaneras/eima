@@ -1,4 +1,5 @@
 <script>
+  import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
   import { onMount } from 'svelte';
 
   const phrases = ['Más energía', 'Más salud', 'Más vida.'];
@@ -53,10 +54,10 @@
   ></div>
 
   <div class="relative z-10 mx-auto max-w-7xl px-6 pb-20 pt-20 md:px-10 md:pt-24">
-    <h1 class="max-w-3xl leading-[1.02] tracking-tight">
-      <span class="mb-4 block max-w-xl text-[7px] font-light tracking-wide text-white/10 md:text-[7px]">
+    <div class="max-w-3xl leading-[1.02] tracking-tight">
+      <h1 class="mb-4 block max-w-xl text-[7px] font-light tracking-wide text-white/10 md:text-[7px]">
         Ejercicio y fisioterapia a domicilio en Mallorca para personas con cáncer.
-      </span>
+      </h1>
       <span class="block text-4xl font-normal text-white md:text-6xl">Menos limitaciones.</span>
       <span
         class="mt-1 block text-5xl font-bold text-white md:mt-2 md:text-[5rem]"
@@ -65,29 +66,42 @@
         <span class="inline-block min-w-[10ch]">{typedPhrase}</span>
       </span>
       <span
-        class="mt-3 block font-serif-italic text-3xl md:text-[3.2rem]"
-        style="color: var(--color-brand-accent); font-weight: 300;"
+        class="hero-accent-line mt-3 block font-serif-italic text-3xl md:text-[3.2rem]"
+        style="color: var(--color-brand-accent);"
       >
         Desde casa.
       </span>
-    </h1>
+    </div>
 
     <div class="mt-10 max-w-lg text-[15px] font-light leading-relaxed text-white/90 md:text-base">
-      <p>
+      <p class="md:hidden">
         Si estás pasando por un <strong class="font-semibold">cáncer</strong> (o ya lo has pasado),
         te ayudamos a empezar o retomar el <strong class="font-semibold">ejercicio</strong> de forma
         segura con un acompañamiento de 12 semanas adaptado a ti.
       </p>
-      <p class="mt-4">
+      <p class="mt-4 md:hidden">
         Incluso si sigues con
         <strong class="font-semibold">dolor, fatiga o miedo a empeorar</strong> tras tus
-        tratamientos.
+        tratamientos médicos.
+      </p>
+      <p class="hidden md:block">
+        Si estás pasando por un <strong class="font-semibold">cáncer</strong> (o ya lo has pasado),
+        <br />
+        te ayudamos a empezar o retomar el <strong class="font-semibold">ejercicio</strong> de forma segura
+        <br />
+        con un acompañamiento de 12 semanas adaptado a ti.
+      </p>
+      <p class="mt-4 hidden md:block">
+        Incluso si sigues con
+        <strong class="font-semibold">dolor, fatiga o miedo a empeorar</strong>
+        <br />
+        tras tus tratamientos médicos.
       </p>
     </div>
 
     <div class="mt-10 flex flex-col items-center gap-4">
       <a
-        href={`https://wa.me/34604529731?text=${encodeURIComponent('Hola, quiero saber si podéis ayudarme.')}`}
+        href={WEB_WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
         class="hero-cta inline-flex w-fit items-center justify-center rounded-full border border-white/50 px-7 py-3.5 text-white font-light transition-[background-color,transform,font-weight] duration-300 ease-out hover:scale-[1.03] hover:bg-white/10 hover:font-bold"
@@ -129,4 +143,12 @@
     position: relative;
     z-index: 1;
   }
+
+  .hero-accent-line {
+    font-weight: 300;
+  }
 </style>
+
+
+
+

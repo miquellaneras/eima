@@ -125,7 +125,7 @@
       category={data.category}
     />
 
-    <div class="mt-10">
+    <div class="prose-blog mt-10">
       {#if post?.Component}
         <svelte:component this={post.Component} />
       {/if}

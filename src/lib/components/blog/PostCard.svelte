@@ -16,7 +16,7 @@
 
 <a
   href={`/blog/${post.slug}`}
-  class="group flex flex-col rounded-[10px] bg-white p-7 shadow-[0_1px_3px_rgba(14,29,38,0.06)] hover:shadow-[0_2px_10px_rgba(14,29,38,0.08)] transition-shadow"
+  class="group flex flex-col rounded-[10px] border border-transparent bg-white p-7 shadow-[0_1px_3px_rgba(14,29,38,0.06)] transition-[border-color,box-shadow] duration-250 ease-out hover:border-[#8CD0D6] hover:shadow-[0_2px_10px_rgba(14,29,38,0.08)]"
 >
   {#if post.category}
     <span

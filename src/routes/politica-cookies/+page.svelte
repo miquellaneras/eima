@@ -5,9 +5,9 @@
   <link rel="canonical" href="https://eimafisioterapia.es/politica-cookies" />
 </svelte:head>
 
-<article class="max-w-3xl mx-auto px-6 md:px-8 pt-16 pb-16 prose-blog">
+<article class="mx-auto max-w-3xl px-6 pb-16 pt-16 prose-blog md:px-8">
   <h1>Política de Cookies</h1>
-  <p class="text-secondary">Última actualización: 17 de abril de 2026</p>
+  <p class="mt-2 text-secondary">Última actualización: 29 de abril de 2026</p>
 
   <h2>¿Qué son las cookies?</h2>
   <p>
@@ -17,19 +17,22 @@
 
   <h2>Cookies que utilizamos</h2>
   <p>
-    Este sitio web utiliza únicamente cookies técnicas imprescindibles para su correcto
-    funcionamiento. No utilizamos cookies de analítica, publicidad ni seguimiento de terceros sin tu
-    consentimiento.
+    En este momento, este sitio web utiliza únicamente cookies técnicas imprescindibles para su
+    correcto funcionamiento. No utilizamos cookies de analítica, publicidad ni seguimiento de
+    terceros sin tu consentimiento.
+  </p>
+
+  <h2>Cuándo te pediríamos consentimiento</h2>
+  <p>
+    Si más adelante incorporamos herramientas como analítica, mapas, vídeos incrustados,
+    publicidad o servicios de terceros que instalen cookies no técnicas, mostraremos un sistema de
+    consentimiento para que puedas aceptar, rechazar o configurar esas cookies antes de que se
+    activen.
   </p>
 
   <h2>Gestión de cookies</h2>
   <p>
     Puedes configurar tu navegador para aceptar, rechazar o borrar las cookies en cualquier momento.
-    La mayoría de los navegadores permiten hacerlo desde la sección de preferencias o
-    configuración.
-  </p>
-
-  <p class="text-sm text-secondary mt-10">
-    Este texto es un borrador y puede requerir revisión legal antes de publicarse en producción.
+    La mayoría de navegadores permiten hacerlo desde la sección de preferencias o configuración.
   </p>
 </article>
