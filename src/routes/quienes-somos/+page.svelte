@@ -485,6 +485,11 @@
           </div>
         </div>
 
+        <div class="team-mobile-name-row md:hidden" aria-label="Historias del equipo">
+          <a class="team-mobile-name-chip" href="/quienes-somos/historia#miquel">Miquel</a>
+          <a class="team-mobile-name-chip" href="/quienes-somos/historia#jaume">Jaume</a>
+        </div>
+
         <p class="team-photo-hint team-photo-hint--mobile mt-[-0.5rem] text-center text-[14px] font-light italic leading-relaxed text-[#233F4E]/72 md:hidden">
           <span>{teamHintMobileLineOne}</span>
           <br />
@@ -825,6 +830,33 @@
     width: min(100%, 31rem);
   }
 
+  .team-mobile-name-row {
+    display: none;
+  }
+
+  .team-mobile-name-chip {
+    background: rgba(24, 24, 27, 0.92);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    padding: 0.45rem 0.55rem;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .team-mobile-name-chip::after {
+    border-bottom: 5px solid rgba(24, 24, 27, 0.92);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: 100%;
+    content: '';
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
   .team-health-card {
     border: 1.5px solid #4083a7;
     border-radius: 12px;
@@ -998,10 +1030,10 @@
 
     .team-photo-card {
       aspect-ratio: 1.13 / 1;
-      margin-top: 0.75rem;
+      margin-top: -2.25rem;
       margin-inline: auto;
       order: 3;
-      overflow: visible;
+      overflow: hidden;
       width: 100%;
     }
 
@@ -1010,36 +1042,42 @@
     }
 
     .team-photo-hint--mobile {
+      line-height: 1.55;
       margin-top: 1rem;
       order: 2;
       overflow: visible;
-      padding-bottom: 0;
+      padding-bottom: 0.2rem;
     }
 
     .team-photo-tooltip {
-      bottom: 1.75rem;
+      display: none;
     }
 
     .team-photo-hover {
       bottom: 0.15rem;
+      display: none;
       pointer-events: none;
       top: 0.15rem;
     }
 
-    .team-photo-tooltip {
-      pointer-events: auto;
+    .team-mobile-name-row {
+      display: flex;
+      gap: 2.75rem;
+      justify-content: center;
+      margin-top: 0.65rem;
+      order: 4;
     }
 
     .team-health-wrap {
       margin-top: 1.25rem;
       max-width: 28rem;
-      order: 4;
+      order: 5;
       width: 100%;
     }
 
     .team-actions {
       margin-top: 1.5rem;
-      order: 5;
+      order: 6;
     }
   }
 
