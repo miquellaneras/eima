@@ -734,6 +734,7 @@
     aspect-ratio: 4 / 5;
     border-radius: 18px;
     overflow: visible;
+    filter: drop-shadow(0 16px 26px rgba(14, 29, 38, 0.12));
     width: min(82vw, 21rem);
   }
 
@@ -984,7 +985,7 @@
 
     .team-photo-card {
       aspect-ratio: 1.13 / 1;
-      margin-top: 0.85rem;
+      margin-top: 0;
       margin-inline: auto;
       order: 2;
       overflow: visible;
@@ -996,6 +997,7 @@
     }
 
     .team-photo-hint--mobile {
+      margin-top: 1.65rem;
       order: 3;
     }
 
@@ -1007,7 +1009,7 @@
     }
 
     .team-actions {
-      margin-top: 1.5rem;
+      margin-top: 1.15rem;
       order: 5;
     }
   }
