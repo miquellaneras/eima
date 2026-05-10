@@ -985,7 +985,7 @@
 
     .team-photo-card {
       aspect-ratio: 1.13 / 1;
-      margin-top: 0.65rem;
+      margin-top: 0.35rem;
       margin-inline: auto;
       order: 3;
       overflow: visible;
@@ -999,6 +999,19 @@
     .team-photo-hint--mobile {
       margin-top: 1rem;
       order: 2;
+      overflow: visible;
+      padding-bottom: 0.15rem;
+    }
+
+    .team-photo-hint--mobile::after {
+      color: #4083a7;
+      content: '↓';
+      display: block;
+      font-size: 3.1rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 0.95;
+      margin: 0.55rem auto 0;
     }
 
     .team-photo-tooltip {
