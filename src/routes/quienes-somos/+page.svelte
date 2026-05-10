@@ -447,7 +447,7 @@
 
       <div bind:this={teamHintNode} class="team-media-column justify-self-center md:mt-7 md:justify-self-end">
         <p
-          class="team-photo-hint team-photo-hint--desktop mb-[-0.5rem] hidden text-center text-[14px] font-light italic leading-relaxed text-[#233F4E]/72 md:block"
+          class="team-photo-hint team-photo-hint--desktop mb-[0.15rem] hidden text-center text-[14px] font-light italic leading-relaxed text-[#233F4E]/72 md:block"
         >
           {typedTeamHint}{#if teamHintStarted && typedTeamHint.length < teamHintFullText.length}<span class="team-hint-cursor"></span>{/if}
         </p>
@@ -476,9 +476,9 @@
         </div>
 
         <p class="team-photo-hint team-photo-hint--mobile mt-[-0.5rem] text-center text-[14px] font-light italic leading-relaxed text-[#233F4E]/72 md:hidden">
-          <span>{getTypedSegment(typedTeamHint, 0, 38)}</span>
+          <span>{getTypedSegment(typedTeamHint, 0, 34)}</span>
           <br />
-          <span>{getTypedSegment(typedTeamHint, 38, teamHintFullText.length - 38)}</span>{#if teamHintStarted && typedTeamHint.length < teamHintFullText.length}<span class="team-hint-cursor"></span>{/if}
+          <span>{getTypedSegment(typedTeamHint, 34, teamHintFullText.length - 34)}</span>{#if teamHintStarted && typedTeamHint.length < teamHintFullText.length}<span class="team-hint-cursor"></span>{/if}
         </p>
 
         <div class="team-actions mt-6 flex items-center justify-center md:mt-3">
@@ -733,7 +733,7 @@
   .team-photo-card {
     aspect-ratio: 4 / 5;
     border-radius: 18px;
-    overflow: hidden;
+    overflow: visible;
     width: min(82vw, 21rem);
   }
 
@@ -984,9 +984,10 @@
 
     .team-photo-card {
       aspect-ratio: 1.13 / 1;
+      margin-top: 0.85rem;
       margin-inline: auto;
       order: 2;
-      overflow: hidden;
+      overflow: visible;
       width: 100%;
     }
 
