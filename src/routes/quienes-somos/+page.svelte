@@ -9,6 +9,8 @@
   const closingMiddle = 'también necesita';
   const closingAccentTwo = 'tiempo.';
   const teamHintFullText = 'Haz clic encima de uno de nosotros para conocer nuestra historia.';
+  const teamHintMobileLineOne = 'Haz clic encima de uno de nuestros nombres';
+  const teamHintMobileLineTwo = 'para conocer nuestra historia al completo';
   const closingFirstLineLength = closingPrefix.length + closingAccentOne.length;
   const closingSecondLineStart = closingFirstLineLength + 1;
   const closingThirdLineStart = closingSecondLineStart + closingMiddle.length + 1;
@@ -468,15 +470,25 @@
               href="/quienes-somos/historia#jaume"
               aria-label="Ver la historia de Jaume Sansó"
             ></a>
-            <span class="team-photo-tooltip team-photo-tooltip--left" aria-hidden="true">Miquel</span>
-            <span class="team-photo-tooltip team-photo-tooltip--right" aria-hidden="true">Jaume</span>
+            <a
+              class="team-photo-tooltip team-photo-tooltip--left"
+              href="/quienes-somos/historia#miquel"
+              aria-label="Ver la historia de Miquel Galmés"
+              >Miquel</a
+            >
+            <a
+              class="team-photo-tooltip team-photo-tooltip--right"
+              href="/quienes-somos/historia#jaume"
+              aria-label="Ver la historia de Jaume Sansó"
+              >Jaume</a
+            >
           </div>
         </div>
 
         <p class="team-photo-hint team-photo-hint--mobile mt-[-0.5rem] text-center text-[14px] font-light italic leading-relaxed text-[#233F4E]/72 md:hidden">
-          <span>{getTypedSegment(typedTeamHint, 0, 34)}</span>
+          <span>{teamHintMobileLineOne}</span>
           <br />
-          <span>{getTypedSegment(typedTeamHint, 34, teamHintFullText.length - 34)}</span>{#if teamHintStarted && typedTeamHint.length < teamHintFullText.length}<span class="team-hint-cursor"></span>{/if}
+          <span>{teamHintMobileLineTwo}</span>
         </p>
 
         <div class="team-actions mt-6 flex items-center justify-center md:mt-3">
@@ -805,6 +817,7 @@
   .team-photo-hover--right:hover ~ .team-photo-tooltip--right,
   .team-photo-hover--right:focus-visible ~ .team-photo-tooltip--right {
     opacity: 1;
+    pointer-events: auto;
     transform: translate(-50%, 0) scale(1);
   }
 
@@ -985,7 +998,7 @@
 
     .team-photo-card {
       aspect-ratio: 1.13 / 1;
-      margin-top: 0.35rem;
+      margin-top: 0.75rem;
       margin-inline: auto;
       order: 3;
       overflow: visible;
@@ -1000,18 +1013,7 @@
       margin-top: 1rem;
       order: 2;
       overflow: visible;
-      padding-bottom: 0.15rem;
-    }
-
-    .team-photo-hint--mobile::after {
-      color: #4083a7;
-      content: '↓';
-      display: block;
-      font-size: 3.1rem;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 0.95;
-      margin: 0.55rem auto 0;
+      padding-bottom: 0;
     }
 
     .team-photo-tooltip {
@@ -1020,7 +1022,12 @@
 
     .team-photo-hover {
       bottom: 0.15rem;
+      pointer-events: none;
       top: 0.15rem;
+    }
+
+    .team-photo-tooltip {
+      pointer-events: auto;
     }
 
     .team-health-wrap {
