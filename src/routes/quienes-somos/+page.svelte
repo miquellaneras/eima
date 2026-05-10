@@ -462,16 +462,14 @@
               class="team-photo-hover team-photo-hover--left"
               href="/quienes-somos/historia#miquel"
               aria-label="Ver la historia de Miquel Galmés"
-            >
-              <span class="team-photo-tooltip">Miquel</span>
-            </a>
+            ></a>
             <a
               class="team-photo-hover team-photo-hover--right"
               href="/quienes-somos/historia#jaume"
               aria-label="Ver la historia de Jaume Sansó"
-            >
-              <span class="team-photo-tooltip">Jaume</span>
-            </a>
+            ></a>
+            <span class="team-photo-tooltip team-photo-tooltip--left" aria-hidden="true">Miquel</span>
+            <span class="team-photo-tooltip team-photo-tooltip--right" aria-hidden="true">Jaume</span>
           </div>
         </div>
 
@@ -783,12 +781,12 @@
     z-index: 30;
   }
 
-  .team-photo-hover--left .team-photo-tooltip {
-    left: 68%;
+  .team-photo-tooltip--left {
+    left: 34%;
   }
 
-  .team-photo-hover--right .team-photo-tooltip {
-    left: 26%;
+  .team-photo-tooltip--right {
+    left: 63%;
   }
 
   .team-photo-tooltip::after {
@@ -802,8 +800,10 @@
     transform: translateX(-50%);
   }
 
-  .team-photo-hover:hover .team-photo-tooltip,
-  .team-photo-hover:focus-visible .team-photo-tooltip {
+  .team-photo-hover--left:hover ~ .team-photo-tooltip--left,
+  .team-photo-hover--left:focus-visible ~ .team-photo-tooltip--left,
+  .team-photo-hover--right:hover ~ .team-photo-tooltip--right,
+  .team-photo-hover--right:focus-visible ~ .team-photo-tooltip--right {
     opacity: 1;
     transform: translate(-50%, 0) scale(1);
   }
@@ -1003,6 +1003,11 @@
 
     .team-photo-tooltip {
       bottom: 1.75rem;
+    }
+
+    .team-photo-hover {
+      bottom: 0.15rem;
+      top: 0.15rem;
     }
 
     .team-health-wrap {
