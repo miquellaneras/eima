@@ -734,7 +734,6 @@
     aspect-ratio: 4 / 5;
     border-radius: 18px;
     overflow: visible;
-    filter: drop-shadow(0 16px 26px rgba(14, 29, 38, 0.12));
     width: min(82vw, 21rem);
   }
 
@@ -972,6 +971,7 @@
     .team-layout {
       display: flex;
       flex-direction: column;
+      gap: 0;
     }
 
     .team-copy,
@@ -985,7 +985,7 @@
 
     .team-photo-card {
       aspect-ratio: 1.13 / 1;
-      margin-top: 0;
+      margin-top: 1.4rem;
       margin-inline: auto;
       order: 2;
       overflow: visible;
@@ -997,8 +997,12 @@
     }
 
     .team-photo-hint--mobile {
-      margin-top: 1.65rem;
+      margin-top: 0.95rem;
       order: 3;
+    }
+
+    .team-photo-tooltip {
+      bottom: 1.75rem;
     }
 
     .team-health-wrap {
@@ -1009,7 +1013,7 @@
     }
 
     .team-actions {
-      margin-top: 1.15rem;
+      margin-top: 1.5rem;
       order: 5;
     }
   }
