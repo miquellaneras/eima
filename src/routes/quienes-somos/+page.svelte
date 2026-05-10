@@ -10,7 +10,7 @@
   const closingAccentTwo = 'tiempo.';
   const teamHintFullText = 'Haz clic encima de uno de nosotros para conocer nuestra historia.';
   const teamHintMobileLineOne = 'Haz clic encima de uno de nuestros nombres';
-  const teamHintMobileLineTwo = 'para conocer nuestra historia al completo';
+  const teamHintMobileLineTwo = 'para conocer nuestra historia al completo.';
   const closingFirstLineLength = closingPrefix.length + closingAccentOne.length;
   const closingSecondLineStart = closingFirstLineLength + 1;
   const closingThirdLineStart = closingSecondLineStart + closingMiddle.length + 1;
