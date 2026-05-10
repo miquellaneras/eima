@@ -1046,7 +1046,7 @@
       margin-top: 1rem;
       order: 2;
       overflow: visible;
-      padding-bottom: 0.2rem;
+      padding-bottom: 2.25rem;
     }
 
     .team-photo-tooltip {
