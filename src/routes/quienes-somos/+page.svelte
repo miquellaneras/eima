@@ -1064,7 +1064,7 @@
       display: flex;
       gap: 2.75rem;
       justify-content: center;
-      margin-top: 0.65rem;
+      margin-top: -0.25rem;
       order: 4;
     }
 
