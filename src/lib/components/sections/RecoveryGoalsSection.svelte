@@ -49,11 +49,11 @@
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto max-w-4xl text-center">
       <h2
-        class="font-display-serif text-[2.2rem] leading-[1.04] font-medium tracking-[0] text-[color:var(--color-brand)] md:text-[48px]"
+        class="font-display-serif text-[2.05rem] leading-[1.04] font-medium tracking-[0] text-[color:var(--color-brand)] md:text-[48px]"
       >
-        Lo que queremos
+        <span class="block md:inline">Lo que queremos</span>
         <span
-          class="text-[#4083A7]"
+          class="block text-[#4083A7] md:inline"
           style="font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;"
           >ayudarte a conseguir</span
         >

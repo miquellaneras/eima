@@ -43,12 +43,12 @@
   image="/Gemini_Generated_Image_8crr28crr28crr28-100.png"
   topHtml="<strong>Sin SALUD,</strong> no disfrutas de tu tiempo."
   middleHtml="<strong>Sin TIEMPO,</strong> no puedes cuidar tu salud."
-  bottomHtml="Con nosotros, <strong>cuidarás tu salud sin renunciar a tu tiempo.</strong>"
+  bottomHtml="Con nosotros, <strong>cuidarás tu salud <br class='parallax-mobile-break' />sin renunciar a tu tiempo.</strong>"
   mobileTopSize={16}
   desktopTopSize={22}
   mobileMiddleSize={16}
   desktopMiddleSize={22}
-  mobileBottomSize={22}
+  mobileBottomSize={19}
   desktopBottomSize={33}
   lineGap={20}
 />

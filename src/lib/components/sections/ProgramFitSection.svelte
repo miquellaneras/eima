@@ -66,7 +66,7 @@
             class="fit-card__icon-wrap flex h-18 w-18 shrink-0 items-center justify-center rounded-full bg-[#E7F3E8] text-[#3F8A57]"
             aria-hidden="true"
           >
-            <svg viewBox="0 0 24 24" class="h-9 w-9 fill-none stroke-current stroke-[2.2]">
+            <svg viewBox="0 0 24 24" class="h-10 w-10 fill-none stroke-current stroke-[2.4]">
               <path d="M5 12.5 9.2 16.7 19 6.9" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
@@ -110,14 +110,14 @@
             class="fit-card__icon-wrap flex h-18 w-18 shrink-0 items-center justify-center rounded-full bg-[#FCE4E4] text-[#C64A4A]"
             aria-hidden="true"
           >
-            <svg viewBox="0 0 24 24" class="h-9 w-9 fill-none stroke-current stroke-[2.2]">
+            <svg viewBox="0 0 24 24" class="h-10 w-10 fill-none stroke-current stroke-[2.4]">
               <path d="M7 7 17 17" stroke-linecap="round"></path>
               <path d="M17 7 7 17" stroke-linecap="round"></path>
             </svg>
           </div>
 
           <div>
-            <h3 class="fit-card__title text-[25px] leading-[1.05] text-[#233F4E]">
+            <h3 class="fit-card__title text-[23px] leading-[1.05] text-[#233F4E] md:text-[25px]">
               <span
                 class="font-display-serif"
                 style="font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;"

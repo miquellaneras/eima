@@ -158,10 +158,7 @@
 
   <div class="mx-auto mt-12 max-w-4xl px-6 text-center md:mt-16 md:px-10">
     <p class="text-[16px] font-light leading-[1.65] text-[#233F4E]">
-      Porque <strong>tu cuerpo cambia</strong> semana a semana.
-      <span class="md:hidden"><br /></span>
-      <span class="hidden md:inline"> </span>
-      Y <strong>el plan también</strong> debe hacerlo.
+      Porque <strong>tu cuerpo cambia</strong> semana a semana. Y <strong>el plan también</strong> debe hacerlo.
     </p>
 
     <a

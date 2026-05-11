@@ -61,9 +61,15 @@
             </div>
 
             <h3
-              class="font-noto-serif mx-auto mt-3 min-h-[4.9rem] max-w-[17.4rem] text-[1.45rem] leading-[1.05] text-[color:var(--color-brand)] md:min-h-[5.1rem] md:max-w-[17.6rem] md:text-[1.54rem]"
+              class="audience-quote font-noto-serif mx-auto mt-3 min-h-[4.9rem] max-w-[17.4rem] text-[1.45rem] leading-[1.05] text-[color:var(--color-brand)] md:min-h-[5.1rem] md:max-w-[17.6rem] md:text-[1.54rem]"
             >
-              {item.quote}
+              {#if i === 0}
+                <span class="block">“No he hecho ejercicio</span>
+                <span class="block">nunca y no sé por</span>
+                <span class="block">dónde empezar.”</span>
+              {:else}
+                {item.quote}
+              {/if}
             </h3>
 
             <div class="mx-auto mt-4 h-px w-[4.75rem] bg-[color:var(--color-brand-accent)]"></div>
@@ -140,6 +146,11 @@
   .audience-title,
   .audience-title * {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  }
+
+  .audience-quote,
+  .audience-quote * {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif !important;
   }
 
   .audience-reveal {

@@ -5,6 +5,7 @@ export const AUTHORS = {
     role: 'Fisioterapeuta · Ejercicio y cáncer',
     jobTitle: 'Fisioterapeuta especializado en ejercicio terapéutico y cáncer',
     bio: 'Fisioterapeuta con más de siete años de experiencia hospitalaria acompañando a personas durante y después del cáncer.',
+    avatar: '/team-jaume.png',
     url: 'https://eimafisioterapia.es/quienes-somos',
     sameAs: 'https://www.instagram.com/eima.fisioterapia'
   },

@@ -75,7 +75,7 @@
       <span aria-hidden="true" class="mx-2">/</span>
       <span>Blog</span>
     </nav>
-    <h1 class="blog-hero-title max-w-[12ch] text-[45px] leading-[0.98] text-white md:max-w-none md:text-[60px]">
+    <h1 class="blog-hero-title max-w-[12ch] text-[42px] leading-[0.98] text-white md:max-w-none md:text-[60px]">
       <span class="block md:whitespace-nowrap">Artículos sobre</span>
       <span class="block text-[#8CD0D6] md:hidden">cáncer, ejercicio</span>
       <span class="block text-[#8CD0D6] md:hidden">y salud.</span>

@@ -234,8 +234,8 @@
       alt=""
       class="h-full w-full object-cover object-center"
     />
-    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,18,24,0.82)_0%,rgba(8,18,24,0.68)_36%,rgba(8,18,24,0.35)_68%,rgba(8,18,24,0.18)_100%)]"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,18,24,0.42)_0%,rgba(8,18,24,0.12)_48%,rgba(8,18,24,0.72)_100%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,18,24,0.72)_0%,rgba(8,18,24,0.56)_36%,rgba(8,18,24,0.28)_68%,rgba(8,18,24,0.14)_100%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,18,24,0.34)_0%,rgba(8,18,24,0.08)_48%,rgba(8,18,24,0.62)_100%)]"></div>
   </div>
 
   <div class="relative z-10 mx-auto flex min-h-[calc(86vh-6rem)] max-w-7xl flex-col justify-end px-5 pb-14 md:px-10 md:pb-20">

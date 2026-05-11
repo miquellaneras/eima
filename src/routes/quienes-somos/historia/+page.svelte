@@ -233,7 +233,7 @@
         <span class="story-title__line"><span>historia</span> a fondo</span>
       </h1>
       <p class="mt-7 max-w-xl text-[16px] font-light leading-[1.85] text-white/88">
-        <span class="block">Dos caminos distintos, una misma idea:</span>
+        <span class="block">Dos caminos distintos, una <strong>misma idea</strong>:</span>
         <span class="block">Ayudarte a recuperar seguridad, energía y confianza en tu proceso.</span>
       </p>
     </div>
@@ -323,7 +323,10 @@
             <div class="profile-card__body space-y-10">
               {#each activeProfile.storySections as section}
                 <section>
-                  <h3 class="story-section-heading text-[22px] leading-[1.2] text-[#4083A7]">
+                  <h3
+                    class="story-section-heading text-[22px] leading-[1.2] text-[#4083A7]"
+                    style={section.title.includes('respuestas') ? 'font-size: 21.5px;' : ''}
+                  >
                     {section.title}
                   </h3>
                   <div class="mt-4 space-y-4 text-[14px] font-light leading-[1.85] text-[#233F4E]/86">

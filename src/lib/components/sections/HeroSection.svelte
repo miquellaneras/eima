@@ -58,7 +58,7 @@
       <h1 class="mb-4 block max-w-xl text-[7px] font-light tracking-wide text-white/10 md:text-[7px]">
         Ejercicio y fisioterapia a domicilio en Mallorca para personas con cáncer.
       </h1>
-      <span class="block text-4xl font-normal text-white md:text-6xl">Menos limitaciones.</span>
+      <span class="block text-[2.1rem] font-normal text-white md:text-6xl">Menos limitaciones.</span>
       <span
         class="mt-1 block text-5xl font-bold text-white md:mt-2 md:text-[5rem]"
         aria-label={phrases[phraseIndex]}

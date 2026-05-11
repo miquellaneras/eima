@@ -163,7 +163,7 @@
   image="/Gemini_Generated_Image_y50u8jy50u8jy50u-100.png"
   topHtml="La <strong>medicina</strong> se centrará en que vivas <strong>MÁS.</strong>"
   bottomHtml="<strong>Nosotros</strong> en que vivas <strong>MEJOR.</strong>"
-  mobileTopSize={16}
+  mobileTopSize={15}
   desktopTopSize={22}
   mobileBottomSize={22}
   desktopBottomSize={33}
@@ -193,10 +193,10 @@
 <ParallaxSloganSection
   image="/Gemini_Generated_Image_bhw0rlbhw0rlbhw0-70.png"
   topHtml="Tu <strong>salud</strong> y tu <strong>tiempo</strong> son lo <br class='parallax-mobile-break' /><strong>más valioso</strong> que tienes."
-  bottomHtml="Con nuestro programa <strong>Empenta</strong>, <br class='parallax-mobile-break' />cuidarás de <strong>AMBOS.</strong>"
+  bottomHtml="Con nuestro programa <strong>Empenta</strong>, cuidarás de <strong>AMBOS.</strong>"
   mobileTopSize={18}
   desktopTopSize={24}
-  mobileBottomSize={22}
+  mobileBottomSize={20}
   desktopBottomSize={33}
 />
 

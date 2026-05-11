@@ -6,9 +6,17 @@
   class="mt-12 rounded-[10px] bg-white p-6 flex flex-col sm:flex-row gap-4 items-start shadow-[0_1px_3px_rgba(14,29,38,0.06)]"
 >
   <div
-    class="shrink-0 w-14 h-14 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] flex items-center justify-center"
+    class="shrink-0 w-16 h-16 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] flex items-center justify-center overflow-hidden"
   >
-    <span class="material-symbols-rounded !text-3xl">account_circle</span>
+    {#if author.avatar}
+      <img
+        src={author.avatar}
+        alt={author.name}
+        class="h-full w-full object-cover object-top"
+      />
+    {:else}
+      <span class="material-symbols-rounded !text-3xl">account_circle</span>
+    {/if}
   </div>
   <div class="flex-1">
     <p class="text-sm font-light opacity-70">Escrito por</p>
