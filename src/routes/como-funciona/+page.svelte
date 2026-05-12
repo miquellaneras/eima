@@ -165,7 +165,7 @@
   bottomHtml="<strong>Nosotros</strong> en que vivas <strong>MEJOR.</strong>"
   mobileTopSize={15}
   desktopTopSize={22}
-  mobileBottomSize={22}
+  mobileBottomSize={21.5}
   desktopBottomSize={33}
 />
 
