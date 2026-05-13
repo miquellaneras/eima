@@ -28,7 +28,7 @@
     <div
       class="flex flex-col items-center justify-center gap-5 border-b border-white/14 pb-8 text-center md:border-b-0 md:border-r md:border-white/18 md:px-6 md:pb-0"
     >
-      <p class="text-[22px] font-medium tracking-[0.02em]">Hablemos</p>
+      <p class="text-[22px] font-medium tracking-[0.02em]">Contáctanos</p>
       <div class="flex flex-wrap items-center justify-center gap-3 md:grid md:grid-cols-2 md:gap-3">
         <a
           href="https://www.instagram.com/eima.fisioterapia"
