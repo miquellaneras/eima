@@ -75,7 +75,7 @@
       <span aria-hidden="true" class="mx-2">/</span>
       <span>Blog</span>
     </nav>
-    <h1 class="blog-hero-title max-w-[12ch] text-[42px] leading-[0.98] text-white md:max-w-none md:text-[60px]">
+    <h1 class="blog-hero-title max-w-[12ch] text-[35px] leading-[1.08] text-white md:max-w-none md:text-[50px] md:leading-[1.1]">
       <span class="block md:whitespace-nowrap">Artículos sobre</span>
       <span class="block text-[#8CD0D6] md:hidden">cáncer, ejercicio</span>
       <span class="block text-[#8CD0D6] md:hidden">y salud.</span>
@@ -97,11 +97,11 @@
 </style>
 
 <section class="py-20 md:py-28">
-  <div class="mx-auto max-w-5xl px-6 md:px-10">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
     {#if data.posts.length === 0}
       <p class="text-center opacity-70">Próximamente publicaremos nuestros primeros artículos.</p>
     {:else}
-      <div class="grid gap-6 md:grid-cols-2">
+      <div class="grid gap-6 md:grid-cols-3">
         {#each data.posts as post (post.slug)}
           <PostCard {post} />
         {/each}

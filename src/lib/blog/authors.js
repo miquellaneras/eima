@@ -1,20 +1,21 @@
 export const AUTHORS = {
   jaume: {
     id: 'jaume',
-    name: 'Jaume Sansó Servera',
+    name: 'Jaume Sansó',
     role: 'Fisioterapeuta · Ejercicio y cáncer',
     jobTitle: 'Fisioterapeuta especializado en ejercicio terapéutico y cáncer',
-    bio: 'Fisioterapeuta con más de siete años de experiencia hospitalaria acompañando a personas durante y después del cáncer.',
+    bio: 'Fisioterapeuta con más de 7 años de experiencia hospitalaria acompañando a personas durante y después del cáncer.',
     avatar: '/team-jaume.png',
     url: 'https://eimafisioterapia.es/quienes-somos',
     sameAs: 'https://www.instagram.com/eima.fisioterapia'
   },
   miquel: {
     id: 'miquel',
-    name: 'Miquel Galmés Vives',
+    name: 'Miquel Galmés',
     role: 'Fisioterapeuta · Ejercicio y dolor oncológico',
     jobTitle: 'Fisioterapeuta especializado en dolor persistente y dolor oncológico',
-    bio: 'Fisioterapeuta especializado en el abordaje del dolor persistente y del dolor oncológico desde el movimiento y la educación.',
+    bio: 'Fisioterapeuta con más de 7 años de experiencia hospitalaria acompañando a personas durante y después del cáncer.',
+    avatar: '/team-miquel.png',
     url: 'https://eimafisioterapia.es/quienes-somos',
     sameAs: 'https://www.instagram.com/eima.fisioterapia'
   }

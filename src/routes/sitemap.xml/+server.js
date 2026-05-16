@@ -8,6 +8,7 @@ const staticRoutes = [
   { path: '/', lastmod: '2026-04-17', changefreq: 'weekly', priority: '1.0' },
   { path: '/como-funciona', lastmod: '2026-04-23', changefreq: 'monthly', priority: '0.9' },
   { path: '/quienes-somos', lastmod: '2026-04-17', changefreq: 'monthly', priority: '0.8' },
+  { path: '/quienes-somos/historia', lastmod: '2026-04-17', changefreq: 'monthly', priority: '0.7' },
   { path: '/contacto', lastmod: '2026-04-17', changefreq: 'monthly', priority: '0.9' },
   { path: '/aviso-legal', lastmod: '2026-04-17', changefreq: 'yearly', priority: '0.3' },
   { path: '/politica-privacidad', lastmod: '2026-04-17', changefreq: 'yearly', priority: '0.3' },

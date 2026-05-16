@@ -198,7 +198,7 @@
   {@html faqSchemaHtml}
 </svelte:head>
 
-<section class="bg-[#f8f4f0] pb-16 pt-10 md:pb-22 md:pt-12">
+<section id="faq" class="bg-[#f8f4f0] pb-16 pt-10 md:pb-22 md:pt-12">
   <div class="mx-auto max-w-5xl px-6 md:px-10">
     <header class="mx-auto max-w-3xl text-center">
       <p class="mb-3 text-[16px] font-light leading-relaxed text-[#233F4E]/76">Preguntas frecuentes</p>
@@ -319,6 +319,10 @@
   .faq-title,
   .faq-title * {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  }
+
+  section {
+    scroll-margin-top: 96px;
   }
 
   .faq-question {

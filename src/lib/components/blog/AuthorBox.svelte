@@ -1,12 +1,15 @@
 <script>
   export let author;
+
+  $: authorHref = author?.id ? `/quienes-somos/historia#${author.id}` : author?.url;
 </script>
 
-<aside
-  class="mt-12 rounded-[10px] bg-white p-6 flex flex-col sm:flex-row gap-4 items-start shadow-[0_1px_3px_rgba(14,29,38,0.06)]"
+<a
+  href={authorHref}
+  class="group mt-12 flex flex-col items-start gap-4 rounded-[10px] border border-transparent bg-white p-6 text-[color:var(--color-brand)] no-underline shadow-[0_1px_3px_rgba(14,29,38,0.06)] transition-[border-color,box-shadow,transform] duration-500 ease-out hover:-translate-y-0.5 hover:border-[#8CD0D6] hover:shadow-[0_10px_24px_rgba(14,29,38,0.10)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8CD0D6] sm:flex-row"
 >
   <div
-    class="shrink-0 w-16 h-16 rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)] flex items-center justify-center overflow-hidden"
+    class="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand)]"
   >
     {#if author.avatar}
       <img
@@ -24,4 +27,4 @@
     <p class="text-sm text-[color:var(--color-brand-soft)] mb-2 font-light">{author.role}</p>
     <p class="text-sm font-light opacity-85">{author.bio}</p>
   </div>
-</aside>
+</a>

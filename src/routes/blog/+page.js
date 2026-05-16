@@ -8,6 +8,7 @@ export function load() {
       slug: p.slug,
       title: p.title,
       description: p.description,
+      titleAccent: p.titleAccent,
       date: p.date,
       updated: p.updated,
       author: p.author,
