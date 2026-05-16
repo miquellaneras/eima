@@ -1,0 +1,8 @@
+RewriteEngine On
+
+Redirect 301 /blog/por-que-cada-vez-hay-mas-cancer-en-gente-joven /blog/por-que-cada-vez-hay-mas-gente-joven-con-cancer-que-esta-pasando
+Redirect 301 /blog/por-que-cancer-no-es-puramente-genetico-habitos-importan /blog/por-que-he-tenido-un-cancer-si-no-hay-antecedentes-en-toda-mi-familia
+Redirect 301 /blog/por-que-descanso-total-ya-no-es-mejor-recomendacion /blog/por-que-el-reposo-total-ya-no-es-la-mejor-recomendacion-si-tienes-cancer
+Redirect 301 /blog/sirve-de-algo-hacer-ejercicio-durante-cancer-mejor-medicina /blog/sirve-de-algo-hacer-ejercicio-si-tengo-cancer-esto-dice-la-ciencia
+Redirect 301 /blog/es-seguro-hacer-ejercicio-durante-la-quimioterapia-o-deberia-esperar-a-terminar-el-tratamiento /blog/es-seguro-hacer-ejercicio-durante-la-quimioterapia-o-deberia-esperar-a-terminarla
+Redirect 301 /blog/puede-el-ejercicio-frenar-el-crecimiento-de-un-tumor-celulas-asesinas /blog/puede-el-ejercicio-frenar-el-crecimiento-de-un-tumor-que-dice-la-ciencia
