@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://eimafisioterapia.es/sitemap.xml
+Sitemap: https://eimafisioterapia.es/sitemap_index.xml

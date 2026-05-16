@@ -94,6 +94,14 @@
     font-weight: 500;
     letter-spacing: 0;
   }
+
+  @media (hover: hover) and (min-width: 768px) {
+    :global(.blog-post-grid:has(a:hover) a:not(:hover)) {
+      filter: blur(1.4px) saturate(0.85);
+      opacity: 0.42;
+      transform: scale(0.99);
+    }
+  }
 </style>
 
 <section class="py-20 md:py-28">
@@ -101,7 +109,7 @@
     {#if data.posts.length === 0}
       <p class="text-center opacity-70">Próximamente publicaremos nuestros primeros artículos.</p>
     {:else}
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="blog-post-grid grid gap-6 md:grid-cols-3">
         {#each data.posts as post (post.slug)}
           <PostCard {post} />
         {/each}

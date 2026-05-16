@@ -20,7 +20,7 @@
 
 <a
   href={`/blog/${post.slug}`}
-  class="group flex h-full flex-col rounded-[10px] border border-transparent bg-white p-7 shadow-[0_1px_3px_rgba(14,29,38,0.06)] transition-[border-color,box-shadow] duration-250 ease-out hover:border-[#8CD0D6] hover:shadow-[0_2px_10px_rgba(14,29,38,0.08)] md:p-6"
+  class="group flex h-full flex-col rounded-[10px] border border-transparent bg-white p-7 shadow-[0_1px_3px_rgba(14,29,38,0.06)] transition-[border-color,box-shadow,filter,opacity,transform] duration-300 ease-out hover:border-[#8CD0D6] hover:shadow-[0_2px_10px_rgba(14,29,38,0.08)] md:p-6"
 >
   <h2
     class="post-card-title text-xl font-normal leading-snug md:line-clamp-3 md:min-h-[5.15rem] md:text-[1.35rem]"
