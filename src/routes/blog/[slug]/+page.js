@@ -19,7 +19,7 @@ const redirects = {
 };
 
 export function entries() {
-  return [...posts.map((p) => ({ slug: p.slug })), ...Object.keys(redirects).map((slug) => ({ slug }))];
+  return posts.map((p) => ({ slug: p.slug }));
 }
 
 export function load({ params }) {
