@@ -9,6 +9,18 @@
 
   $: activeProfile = storyProfiles.find((profile) => profile.id === activeId) ?? storyProfiles[0];
 
+  /** @param {'miquel' | 'jaume'} profileId */
+  const selectProfile = (profileId) => {
+    activeId = profileId;
+
+    if (typeof window === 'undefined') return;
+
+    const nextHash = `#${profileId}`;
+    if (window.location.hash !== nextHash) {
+      window.location.hash = profileId;
+    }
+  };
+
   onMount(() => {
     const setProfileFromHash = () => {
       const profileId = window.location.hash.replace('#', '');
@@ -262,7 +274,7 @@
           type="button"
           class="story-person-slot story-person-slot--miquel"
           aria-label="Ver la historia de Miquel"
-          on:click={() => (activeId = 'miquel')}
+          on:click={() => selectProfile('miquel')}
         >
           <img
             class:inactive-person={activeId !== 'miquel'}
@@ -275,7 +287,7 @@
           type="button"
           class="story-person-slot story-person-slot--jaume"
           aria-label="Ver la historia de Jaume"
-          on:click={() => (activeId = 'jaume')}
+          on:click={() => selectProfile('jaume')}
         >
           <img
             class:inactive-person={activeId !== 'jaume'}
@@ -290,14 +302,14 @@
         <button
           type="button"
           class:active-person={activeId === 'miquel'}
-          on:click={() => (activeId = 'miquel')}
+          on:click={() => selectProfile('miquel')}
         >
           Miquel
         </button>
         <button
           type="button"
           class:active-person={activeId === 'jaume'}
-          on:click={() => (activeId = 'jaume')}
+          on:click={() => selectProfile('jaume')}
         >
           Jaume
         </button>
