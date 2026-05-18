@@ -1,7 +1,19 @@
 <script>
+  import { onMount } from 'svelte';
   import { WEB_WHATSAPP_HREF } from '$lib/data/whatsapp';
+
+  let revealReady = false;
+
   /** @param {HTMLElement} node */
   function revealOnScroll(node) {
+    if (!('IntersectionObserver' in window)) {
+      node.dataset.visible = 'true';
+
+      return {
+        destroy() {}
+      };
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,6 +32,10 @@
       }
     };
   }
+
+  onMount(() => {
+    revealReady = true;
+  });
 
   const situations = [
     {
@@ -40,7 +56,10 @@
   ];
 </script>
 
-<section class="relative bg-[#233F4E] pb-12 pt-20 md:pb-14 md:pt-24">
+<section
+  class="relative bg-[#233F4E] pb-12 pt-20 md:pb-14 md:pt-24"
+  data-reveal-ready={revealReady ? 'true' : undefined}
+>
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto max-w-4xl text-center">
       <h2
@@ -177,12 +196,15 @@
   }
 
   .common-drop {
-    opacity: 0;
-    transform: translate3d(0, -22px, 0);
     transition:
       opacity 560ms ease-out,
       transform 560ms ease-out;
     transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  :global(section[data-reveal-ready='true'] .common-drop:not([data-visible='true'])) {
+    opacity: 0;
+    transform: translate3d(0, -22px, 0);
   }
 
   :global(.common-drop[data-visible='true']) {
@@ -191,9 +213,12 @@
   }
 
   .common-fade {
-    opacity: 0;
     transition: opacity 520ms ease-out;
     transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  :global(section[data-reveal-ready='true'] .common-fade:not([data-visible='true'])) {
+    opacity: 0;
   }
 
   :global(.common-fade[data-visible='true']) {

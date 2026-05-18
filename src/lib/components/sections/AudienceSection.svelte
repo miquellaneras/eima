@@ -1,8 +1,19 @@
 <script>
+  import { onMount } from 'svelte';
   import { audience } from '$lib/data/audience';
+
+  let revealReady = false;
 
   /** @param {HTMLElement} node */
   function revealOnScroll(node) {
+    if (!('IntersectionObserver' in window)) {
+      node.dataset.visible = 'true';
+
+      return {
+        destroy() {}
+      };
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -21,9 +32,16 @@
       }
     };
   }
+
+  onMount(() => {
+    revealReady = true;
+  });
 </script>
 
-<section class="relative bg-[#f8f4f0] pb-16 pt-10 md:pb-[5.5rem] md:pt-12">
+<section
+  class="relative bg-[#f8f4f0] pb-16 pt-10 md:pb-[5.5rem] md:pt-12"
+  data-reveal-ready={revealReady ? 'true' : undefined}
+>
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <header class="mx-auto mb-10 max-w-4xl text-center md:mb-12">
       <h2
@@ -154,12 +172,15 @@
   }
 
   .audience-reveal {
-    opacity: 0;
-    transform: translate3d(-18px, 22px, 0);
     transition:
       opacity 560ms ease-out,
       transform 560ms ease-out;
     transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  :global(section[data-reveal-ready='true'] .audience-reveal:not([data-visible='true'])) {
+    opacity: 0;
+    transform: translate3d(-18px, 22px, 0);
   }
 
   :global(.audience-reveal[data-visible='true']) {
@@ -168,9 +189,12 @@
   }
 
   .audience-fade {
-    opacity: 0;
     transition: opacity 520ms ease-out;
     transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  :global(section[data-reveal-ready='true'] .audience-fade:not([data-visible='true'])) {
+    opacity: 0;
   }
 
   :global(.audience-fade[data-visible='true']) {

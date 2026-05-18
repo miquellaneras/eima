@@ -5,6 +5,7 @@
 
   export let mobileMenuOpen = false;
 
+  let mounted = false;
   let scrolled = false;
 
   const links = [
@@ -24,6 +25,7 @@
   }
 
   onMount(() => {
+    mounted = true;
     updateScrolled();
   });
 
@@ -35,7 +37,7 @@
     pathname === '/contacto' ||
     pathname === '/blog' ||
     pathname.startsWith('/blog/');
-  $: transparent = hasDarkHero && !scrolled && !mobileMenuOpen;
+  $: transparent = mounted && hasDarkHero && !scrolled && !mobileMenuOpen;
   $: lightHeader = transparent;
 </script>
 
