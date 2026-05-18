@@ -556,9 +556,9 @@
   </div>
 </section>
 
-<section class="relative overflow-hidden bg-[#F8F4F0]">
-  <div class="mx-auto grid max-w-7xl items-stretch md:grid-cols-[1fr_0.86fr]">
-    <div class="px-5 py-16 md:px-10 md:py-24 lg:pl-[max(2.5rem,calc((100vw-80rem)/2+2.5rem))]">
+<section id="closing-section" class="closing-section relative overflow-hidden bg-[#F8F4F0]">
+  <div class="closing-section__grid mx-auto grid max-w-7xl items-stretch md:grid-cols-[1.05fr_0.95fr]">
+    <div class="closing-section__copy px-5 py-16 md:px-10 md:py-24">
       <p class="text-[0.76rem] font-medium uppercase tracking-[0.22em] text-[#4083A7]">
         Y así nace EIMA
       </p>
@@ -720,11 +720,16 @@
 
   .closing-type-title {
     min-height: 7.85rem;
+    max-width: 43rem;
   }
 
   .closing-type-title,
   .closing-type-title * {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  }
+
+  .closing-type-title span[aria-hidden='true'] > .block {
+    white-space: nowrap;
   }
 
   .closing-typing-cursor {
